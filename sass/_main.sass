@@ -1,216 +1,271 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.banner
+	position: relative
+	height: calc(100vh - 73px)
+	overflow: hidden
+	color: #fff
+	text-align: center 
+	background: $bg 
+	+ div
+		position: relative
+		z-index: 2
+		margin-top: -45px
+	&__img
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		picture
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			+r(1366)
+				position: static
+		img
+			display: block
+			width: 100%
+			height: auto
+	.l-center
+		position: relative
+		z-index: 2
+		height: 100%
+		padding-top: 11%
+	&__title
+		margin: 0 0 20px
+		font-size: 24px
+		strong
+			display: block
+			font-size: 36px
+	&__link
+		display: inline-block
+		padding: 0 40px 0 35px 
+		height: 44px
+		line-height: 44px
+		background: rgba(#000, 0.7)
+		border-radius: 3px
+		font-size: 14px
+		color: #fff
+		text-transform: uppercase 
+		+tr_bg
+		&:hover
+			background: #000 
+		.icon-currency
+			margin-right: 8px
+.menu-wrap
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 17.5%
+.title-line
+	margin-bottom: 20px
+	overflow: hidden
+	font-size: 14px
+	color: #fff 
+	span
+		display: inline-block
+		position: relative
+		&:before,
+		&:after
+			content: "" 
+			position: absolute
+			top: 50%
+			height: 1px
+			width: 1000px
+			background: rgba(#fff,.4) 
+		&:before
+			left: -1024px
+		&:after
+			right: -1024px
+.menu
+	display: table
+	width: 100%
+	table-layout: fixed
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: bold
+	li
+		display: table-cell
+		padding-left: 1px
+		vertical-align: middle
+		&:first-child
+			padding-left: 0
+	a
+		display: block
+		height: 51px
+		line-height: 51px
+		background: #fff 
+		color: $link_d 
+		+tr_bg
+		&:hover
+			background: darken(#fff, 5%) 
+		&:active
+			background: darken(#fff, 10%)
+.icon-currency
+	display: inline-block
+	vertical-align: middle
+	width: 22px
+	height: 22px
+	background: $link
+	border-radius: 50%
+	text-align: center
+	line-height: 22px
+	.fa
+		vertical-align: middle
+		font-size: 12px
+		color: #fff 
+		
+.items-wrap
+	font-size: 0
+.item
+	position: relative
+	display: inline-block
+	vertical-align: top
+	height: 262px
+	width: 30%
+	margin-left: 2%
+	&:first-child
+		margin-left: 0
+	&:hover
+		.item__info
+			background: darken(#fff, 1%) 
+	&__img
+		height: 197px
+		overflow: hidden
+		img
+			height: auto
+			width: 100%
+			min-height: 100%
+	&__info
+		height: 65px
+		background: #fff
+		border: 1px solid $border
+		+vertical
+		+tr_bg
+	&__in
+		display: inline-block
+		vertical-align: middle
+		font-size: 14px
+		strong
+			display: block
+			font-weight: bold
+			color: #333
+			text-transform: uppercase 
+		span
+			color: $bg 
+.fotorama_items
+	.fotorama__stage
+		height: 262px
+	.item
+		width: 100%
+	.fotorama__shadows--left
+	.fotorama__shadows--right
+		border-style: none !important
+	.fotorama__nav--dots
+		display: none
+	.fotorama__arr
+		bottom: 64px
+		top: auto
+		left: auto
+		margin: 0
+		width: 30px
+		height: 30px
+		line-height: 30px
+		background: #fff
+		border: 1px solid $border
+		+transform(translate3d(0,0,0) !important)
+		opacity: 1 !important
+		text-align: center
+		+tr_bg
+		&:hover
+			background: darken(#fff, 1%) 
+		&:active
+			background: darken(#fff, 5%) 
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle 
+	.fotorama__arr--next
+		right: 0
+		&:before
+			+svg(caret-r,9,17)
+	.fotorama__arr--prev
+		right: 29px
+		&:before
+			+svg(caret-l,9,17)
+.badge
+	position: absolute
+	top: 10px
+	left: 0
+	padding: 0 15px 
+	height: 33px
+	line-height: 33px
+	font-size: 12px
+	color: #fff 
+	font-weight: bold
+	white-space: nowrap
+	background: $link 
+	&:after
+		content: ""
+		position: absolute 
+		top: 0
+		right: -12px
+		+arr(12,33,$link,tl)
+
+.text-col
+	line-height: 1.4
+	color: $text_l 
+	+column-count(2)
+	+column-gap(65px)
+	p
+		margin-bottom: 28px
+		strong
+			font-weight: normal
+			color: #444 
+			
+.add
+	display: table
+	table-layout: fixed
+	width: 100%
+	margin: 67px 0 60px
+	background: #fff
+	font-size: 14px
+	color: #555 
+	&__left
+		display: table-cell
+		vertical-align: middle
+		position: relative
+		padding: 0 45px
+		height: 61px
+		width: 45%
+		font-size: 14px
+		font-weight: bold
+		text-transform: uppercase
+		background: $link 
+		color: #fff 
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			right: -27px
+			+arr(27,61,$link,tl) 
+			+transition(border .2s)
+	i, span
+		display: inline-block
+		vertical-align: middle
+	.icon-gift
+		margin-right: 36px
+	&__right
+		display: table-cell
+		padding-left: 8%
+		vertical-align: middle
+.icon-gift
+	width: 32px
+	height: 32px
+	background: #fff
+	border-radius: 50%
+	text-align: center
+	line-height: 32px  
+	.fa
+		font-size: 16px
+		color: $link 

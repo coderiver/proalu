@@ -47,40 +47,219 @@
 // p
 // 	+jpg(bla)
 
-
+=font
+	font-family: Tahoma, Arial, sans-serif 
+=tr_bg
+	+tr(background .2s)
+=tr_bgc 
+	+transition(color .2s, background .2s)
+=tr_c
+	+tr(color .2s)
+=tr_o
+	+tr(opacity .2s)
+$link: #eb4200
+$link_d: #333
+$bg: #8c8d8d
+$bg_l: #939494
+$text: #555
+$text_l: #999
+$title: #444
+$light: #f3f3f3
+$border: #ddd
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	+font
+	font-size: 13px 
 	line-height: 1.4
-
-
+	min-width: 320px
+	color: $text 
+.l-center
+	margin: 0 auto 
+	max-width: 1140px
+a
+	text-decoration: none
+.out
+	padding-top: 73px
+	&_index
+		background: $light 
+.wrap
+	+clr
 // common blocks      
+.header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 10
+	background: #fff
+	.l-center
+		+clr
+.logo
+	float: left
+	+hide-text
+	height: 73px
+	line-height: 73px
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		+svg(logo,207,32) 
 
+.nav
+	float: left
+	margin-left: 8%
+	+clr
+	&__item
+		float: left
+		margin-left: 38px
+		+tr_bg
+		&:first-child
+			margin-left: 0
+		&:hover
+			background: $bg
+			.nav__link
+				color: #fff 
+			.nav__drop
+				opacity: 1
+				visibility: visible
+		&.is-active
+			background: #fff 
+			> .nav__link
+				color: $link
+				&:after
+					content: ""
+					position: absolute
+					bottom: 0
+					left: -10px
+					right: -10px
+					height: 2px
+					background: $link  
+				 
+	&__link
+		display: block
+		position: relative
+		padding: 0 15px 
+		height: 73px
+		line-height: 73px
+		color: $link_d
+		font-size: 13px
+		text-transform: uppercase 
+	&__drop
+		position: absolute
+		opacity: 0
+		left: 0
+		right: 0
+		top: 100%
+		padding: 27px 0 30px
+		background: $bg 
+		opacity: 0
+		visibility: hidden
+		+tr_o
+		.l-center
+			+clr
 
+.lang
+	position: relative
+	float: right
+	width: 68px
+	text-align: center 
+	font-size: 13px
+	text-transform: uppercase
+	+tr_bg
+	&:hover
+		background: $bg
+		.lang__active
+			color: #fff 
+			span
+				&:before
+					display: none
+				&:after
+					display: block
+		a
+			color: #fff 
+		.lang__list
+			opacity: 1
+			visibility: visible 
+	&__active
+		position: relative
+		display: block
+		z-index: 2
+		height: 73px
+		line-height: 73px
+		color: $text_l  
+		+tr_c
+		span
+			display: inline-block
+			position: relative
+			line-height: 1
+			&:before,
+			&:after
+				content: "" 
+				position: absolute
+				top: 3px
+				right: -14px
+			&:before
+				+svg(caret-d,7,4)
+			&:after
+				+svg(caret-t,7,4)
+				display: none
+	&__list
+		opacity: 0
+		visibility: hidden
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		padding: 58px 0 15px
+		+tr_o
+		background: $bg 
+		a
+			display: block
+			padding: 11px 0 
+			color: #fff 
+			+tr_bgc
+			&:hover
+				background: darken($bg, 5%) 
+		
+.items-small-wrap
+	font-size: 0
+.item-small
+	display: inline-block
+	vertical-align: top
+	margin-left: 29px
+	width: 117px
+	font-size: 14px
+	color: #fff 
+	&:first-child
+		margin-left: 0
+	&_calc
+		.item-small__img
+			background: #7c7c7c
+			line-height: 117px
+			text-align: center 
+			+tr_bg
+		&:hover
+			.item-small__img
+				background: darken(#7c7c7c, 10%)
+	a
+		display: block
+		color: #fff 
+	&__img
+		margin-bottom: 4px
+		height: 117px
+		overflow: hidden
+		img
+			display: block
+			width: auto
+			height: 100%
+		.fa
+			vertical-align: middle
+			font-size: 48px
+			color: #fff 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer
+	background: $bg_l
+	&__top
+		border-bottom: 1px solid #a6a6a6  
 
 
 
