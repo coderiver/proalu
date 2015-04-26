@@ -127,15 +127,26 @@
 	&:first-child
 		margin-left: 0
 	&:hover
-		.item__info
-			background: darken(#fff, 1%) 
+		.item__img
+			&:before
+				background: rgba(#000,.5) 
 	&__img
+		position: relative
 		height: 197px
 		overflow: hidden
 		img
 			height: auto
 			width: 100%
 			min-height: 100%
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background: rgba(#000,0)
+			+tr_bg
 	&__info
 		height: 65px
 		background: #fff
@@ -176,23 +187,35 @@
 		+transform(translate3d(0,0,0) !important)
 		opacity: 1 !important
 		text-align: center
-		+tr_bg
+		+transition(background .2s, border .2s)
 		&:hover
-			background: darken(#fff, 1%) 
-		&:active
-			background: darken(#fff, 5%) 
-		&:before
+			background: $link
+			border-color: $link 
+			&:after
+				opacity: 1
+			&:before
+				opacity: 0
+		&:before,
+		&:after
 			content: ""
-			display: inline-block
-			vertical-align: middle 
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -8px 0 0 -5px 
+			+tr_o
 	.fotorama__arr--next
 		right: 0
 		&:before
 			+svg(caret-r,9,17)
+		&:after
+			+svg(caret-r-white,9,17)
+			opacity: 0
 	.fotorama__arr--prev
 		right: 29px
 		&:before
 			+svg(caret-l,9,17)
+		&:after
+			+svg(caret-l-white,9,17)
 .badge
 	position: absolute
 	top: 10px
@@ -231,6 +254,9 @@
 	background: #fff
 	font-size: 14px
 	color: #555 
+	+tr(box-shadow .2s)
+	&:hover
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
 	&__left
 		display: table-cell
 		vertical-align: middle

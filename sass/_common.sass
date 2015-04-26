@@ -91,6 +91,7 @@ a
 	right: 0
 	z-index: 10
 	background: #fff
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1)
 	.l-center
 		+clr
 .logo
@@ -216,13 +217,14 @@ a
 			display: block
 			padding: 11px 0 
 			color: #fff 
-			+tr_bgc
+			+tr_c
 			&:hover
-				background: darken($bg, 5%) 
+				color: #ccc 
 		
 .items-small-wrap
 	font-size: 0
 .item-small
+	position: relative
 	display: inline-block
 	vertical-align: top
 	margin-left: 29px
@@ -231,31 +233,58 @@ a
 	color: #fff 
 	&:first-child
 		margin-left: 0
-	&_calc
-		.item-small__img
-			background: #7c7c7c
-			line-height: 117px
-			text-align: center 
-			+tr_bg
-		&:hover
-			.item-small__img
-				background: darken(#7c7c7c, 10%)
 	a
 		display: block
 		color: #fff 
 	&__img
+		position: relative
 		margin-bottom: 4px
 		height: 117px
 		overflow: hidden
+		&:hover
+			&:before
+				background: rgba(#000,.8) 
+			+ span
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				top: 50%
+				padding: 0 10px 
+				+transform(translateY(-50%))
+				z-index: 2
+				text-align: center
+				pointer-events: none
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			z-index: 2
+			background: rgba(#000,0)
+			+tr_bg  
 		img
 			display: block
 			width: auto
 			height: 100%
+	&__icon
+		margin-bottom: 4px
+		width: 117px
+		background: #7c7c7c
+		line-height: 117px
+		text-align: center 
+		+tr_bg
+		&:hover
+			.item-small__img
+				background: darken(#7c7c7c, 10%)
 		.fa
 			vertical-align: middle
 			font-size: 48px
 			color: #fff 
-
+	span
+		+transition(top .2s, transform .2s)
 .footer
 	background: $bg_l
 	&__top
