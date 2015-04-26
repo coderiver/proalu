@@ -74,11 +74,22 @@ body
 	color: $text 
 .l-center
 	margin: 0 auto 
-	max-width: 1140px
+	padding: 0 10px 
+	max-width: 1160px
+	+r(1200)
+		max-width: 1024px
+	+r(1023)
+		max-width: 768px
+	+r(767)
+		max-width: 480px
+	+r(480)
+		width: 320px
 a
 	text-decoration: none
 .out
 	padding-top: 73px
+	+r(767)
+		padding-top: 60px
 	&_index
 		background: $light 
 .wrap
@@ -99,16 +110,25 @@ a
 	+hide-text
 	height: 73px
 	line-height: 73px
+	+r(767)
+		height: 60px
+		line-height: 60px
 	&:before
 		content: ""
 		display: inline-block
 		vertical-align: middle
 		+svg(logo,207,32) 
+		+r(767)
+			+svg(logo,162,25) 
 
 .nav
 	float: left
 	margin-left: 8%
 	+clr
+	+r(1200)
+		margin-left: 4%
+	+r(1023)
+		display: none
 	&__item
 		float: left
 		margin-left: 38px
@@ -188,6 +208,9 @@ a
 		line-height: 73px
 		color: $text_l  
 		+tr_c
+		+r(767)
+			height: 60px
+			line-height: 60px
 		span
 			display: inline-block
 			position: relative

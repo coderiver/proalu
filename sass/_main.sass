@@ -1,14 +1,20 @@
 .banner
 	position: relative
-	height: calc(100vh - 73px)
-	overflow: hidden
 	color: #fff
-	text-align: center 
-	background: $bg 
+	text-align: center
+	margin-bottom: -45px
+	+r(767)
+		margin-bottom: 40px
 	+ div
 		position: relative
 		z-index: 2
-		margin-top: -45px
+	&__main
+		position: relative
+		height: calc(100vh - 73px)
+		overflow: hidden
+		background: $bg 
+		+r(767)
+			height: calc(100vh - 60px)
 	&__img
 		position: absolute
 		top: 0
@@ -26,6 +32,9 @@
 			display: block
 			width: 100%
 			height: auto
+			+r(1366)
+				width: auto
+				height: 100%
 	.l-center
 		position: relative
 		z-index: 2
@@ -34,9 +43,13 @@
 	&__title
 		margin: 0 0 20px
 		font-size: 24px
+		+r(1023)
+			font-size: 20px
 		strong
 			display: block
 			font-size: 36px
+			+r(1023)
+				font-size: 30px
 	&__link
 		display: inline-block
 		padding: 0 40px 0 35px 
@@ -54,14 +67,31 @@
 			margin-right: 8px
 .menu-wrap
 	position: absolute
-	left: 0
-	right: 0
+	width: 1160px
+	padding: 0 10px 
+	left: 50%
 	bottom: 17.5%
+	margin-left: -580px
+	+r(1200)
+		width: 1024px
+		margin-left: -512px
+	+r(1023)
+		width: 768px
+		margin-left: -384px
+	+r(767)
+		position: static
+		margin: 0 auto 
+		max-width: 480px
+	+r(480)
+		width: 320px
 .title-line
 	margin-bottom: 20px
 	overflow: hidden
 	font-size: 14px
 	color: #fff 
+	+r(767)
+		margin: 40px 0 20px
+		color: $text 
 	span
 		display: inline-block
 		position: relative
@@ -73,6 +103,8 @@
 			height: 1px
 			width: 1000px
 			background: rgba(#fff,.4) 
+			+r(767)
+				background: rgba(#000,.4) 
 		&:before
 			left: -1024px
 		&:after
@@ -84,12 +116,35 @@
 	font-size: 13px
 	text-transform: uppercase
 	font-weight: bold
+	+r(1200)
+		font-size: 12px
+	+r(1023)
+		font-size: 11px
+		table-layout: auto
+	+r(767)
+		display: block
+		+clr
 	li
 		display: table-cell
 		padding-left: 1px
 		vertical-align: middle
+		+r(767)
+			display: block
+			float: left
+			width: 50%
+			padding: 0
+			border-top: 1px solid $border
+			border-left: 1px solid $border
 		&:first-child
 			padding-left: 0
+			+r(767)
+				border-top: 0
+		&:nth-child(2)
+			+r(767)
+				border-top: 0
+		&:nth-child(2n+1)
+			+r(767)
+				border-left: 0
 	a
 		display: block
 		height: 51px
@@ -122,8 +177,13 @@
 	display: inline-block
 	vertical-align: top
 	height: 262px
-	width: 30%
+	width: 32%
 	margin-left: 2%
+	+r(767)
+		display: block
+		margin-bottom: 20px
+		width: 100%
+		margin-left: 0
 	&:first-child
 		margin-left: 0
 	&:hover
@@ -135,9 +195,15 @@
 		height: 197px
 		overflow: hidden
 		img
+			display: block
 			height: auto
 			width: 100%
-			min-height: 100%
+			+r(1200)
+				height: 110%
+				width: auto
+			+r(767)
+				width: 100%
+				height: auto
 		&:before
 			content: ""
 			position: absolute
@@ -203,13 +269,14 @@
 			left: 50%
 			margin: -8px 0 0 -5px 
 			+tr_o
+		&:after
+			opacity: 0
 	.fotorama__arr--next
 		right: 0
 		&:before
 			+svg(caret-r,9,17)
 		&:after
 			+svg(caret-r-white,9,17)
-			opacity: 0
 	.fotorama__arr--prev
 		right: 29px
 		&:before
@@ -240,6 +307,8 @@
 	color: $text_l 
 	+column-count(2)
 	+column-gap(65px)
+	+r(767)
+		+column-count(1)
 	p
 		margin-bottom: 28px
 		strong
@@ -255,6 +324,14 @@
 	font-size: 14px
 	color: #555 
 	+tr(box-shadow .2s)
+	+r(1023)
+		font-size: 11px
+	+r(767)
+		display: block
+		margin: 40px 0
+		font-size: 14px
+	+r(480)
+		text-align: center
 	&:hover
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
 	&__left
@@ -264,11 +341,18 @@
 		padding: 0 45px
 		height: 61px
 		width: 45%
-		font-size: 14px
 		font-weight: bold
 		text-transform: uppercase
 		background: $link 
 		color: #fff 
+		+r(1200)
+			width: 50%
+			padding: 0 20px 
+		+r(767)
+			display: block
+			padding: 15px 10px 
+			width: 100%
+			height: auto
 		&:after
 			content: ""
 			position: absolute
@@ -276,15 +360,24 @@
 			right: -27px
 			+arr(27,61,$link,tl) 
 			+transition(border .2s)
+			+r(767)
+				display: none
 	i, span
 		display: inline-block
 		vertical-align: middle
 	.icon-gift
 		margin-right: 36px
+		+r(1023)
+			margin-right: 10px
+		+r(480)
+			margin: 0 0 10px 
 	&__right
 		display: table-cell
 		padding-left: 8%
 		vertical-align: middle
+		+r(767)
+			display: block
+			padding: 15px 10px 
 .icon-gift
 	width: 32px
 	height: 32px
