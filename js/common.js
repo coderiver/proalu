@@ -16,4 +16,25 @@ head.ready(function() {
 	// });
 
 	document.createElement( "picture" );
+
+	var winWidth = +$(window).width();
+	function fullHeight() {
+		var el = $(".js-full-height");
+		var winHeight = +$(window).height();
+		var headerHeight = +$(".header").outerHeight();
+		el.css({
+			height: winHeight-headerHeight
+		});
+	}
+	fullHeight();
+	$(window).resize(function(){
+		if (winWidth == !$(window).width()) {
+			fullHeight();
+		}
+	});
+
+	$(".js-toggle-nav").on("click", function(){
+		$("html").toggleClass("has-open-nav");
+		$(this).toggleClass("is-active");
+	});
 });

@@ -10,11 +10,9 @@
 		z-index: 2
 	&__main
 		position: relative
-		height: calc(100vh - 73px)
 		overflow: hidden
+		min-height: 360px
 		background: $bg 
-		+r(767)
-			height: calc(100vh - 60px)
 	&__img
 		position: absolute
 		top: 0
@@ -82,6 +80,7 @@
 		position: static
 		margin: 0 auto 
 		max-width: 480px
+		width: auto 
 	+r(480)
 		width: 320px
 .title-line
