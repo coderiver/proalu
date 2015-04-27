@@ -72,6 +72,8 @@ a { text-decoration: none; }
 .nav__drop { position: absolute; opacity: 0; left: 0; right: 0; top: 100%; padding: 27px 0 30px; background: #8c8d8d; visibility: hidden; -moz-transition: opacity 0.2s; -o-transition: opacity 0.2s; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }
 .nav__drop .l-center { *zoom: 1; }
 .nav__drop .l-center:after { content: " "; display: table; clear: both; }
+.nav__feedback { background: #333; }
+.nav__feedback .nav__link { color: #fff; }
 
 .lang { position: relative; float: right; width: 68px; text-align: center; font-size: 13px; text-transform: uppercase; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; }
 @media only screen and (max-width: 1023px) { .lang { margin-right: 60px; } }
@@ -195,10 +197,16 @@ a { text-decoration: none; }
 .footer__copyright { display: table-cell; padding: 7px 0; text-align: right; vertical-align: middle; }
 .footer__copyright span { vertical-align: middle; }
 
+.btn-feedback { position: fixed; top: 50%; right: 42px; z-index: 9; margin-top: -67px; -moz-transform: rotate(-90deg); -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); -moz-transform-origin: 100% 0; -ms-transform-origin: 100% 0; -webkit-transform-origin: 100% 0; transform-origin: 100% 0; padding: 0 15px; height: 42px; line-height: 42px; background: #333; font-size: 14px; font-weight: bold; color: #fff; border-radius: 5px 5px 0 0; -webkit-font-smoothing: antialiased; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; }
+@media only screen and (max-width: 1023px) { .btn-feedback { display: none; } }
+.btn-feedback:hover { background: #000; }
+.btn-feedback:active { right: 20px; }
+
 .banner { position: relative; color: #fff; text-align: center; margin-bottom: -45px; }
 @media only screen and (max-width: 767px) { .banner { margin-bottom: 40px; } }
 .banner + div { position: relative; z-index: 2; }
-.banner__main { position: relative; overflow: hidden; min-height: 360px; background: #8c8d8d; }
+.banner__main { position: relative; overflow: hidden; min-height: 360px; background: #8c8d8d; height: calc(100vh - 73px); }
+@media only screen and (max-width: 1023px) { .banner__main { height: calc(100vh - 60px); } }
 .banner__img { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
 .banner__img picture { position: absolute; bottom: 0; left: 0; width: 100%; }
 @media only screen and (max-width: 1366px) { .banner__img picture { position: static; } }

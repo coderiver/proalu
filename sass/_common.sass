@@ -187,7 +187,10 @@ a
 		+tr_o
 		.l-center
 			+clr
-
+	&__feedback
+		background: #333
+		.nav__link
+			color: #fff 
 .lang
 	position: relative
 	float: right
@@ -610,33 +613,31 @@ a
 		span
 			vertical-align: middle
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn-feedback
+	position: fixed
+	top: 50%
+	right: 42px
+	z-index: 9
+	margin-top: -67px
+	+transform(rotate(-90deg))
+	+transform-origin(100%, 0)
+	padding: 0 15px 
+	height: 42px
+	line-height: 42px
+	background: #333
+	font-size: 14px
+	font-weight: bold 
+	color: #fff
+	border-radius: 5px 5px 0 0  
+	-webkit-font-smoothing: antialiased
+	+tr_bg
+	+r(1023)
+		display: none
+	&:hover
+		background: #000
+	&:active
+		right: 20px
+	
 
 
 
