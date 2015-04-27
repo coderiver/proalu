@@ -1,216 +1,190 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.page-head
+	position: relative
+	overflow: hidden
+	height: 235px
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		z-index: 2 
+	&:before
+		+background-image(linear-gradient(71.57deg, #000 0%, rgba(0, 0, 0, 0.4) 0%, rgba(251, 76, 41, 0.4) 100%))
+	&:after
+		top: auto
+		height: 50%
+		+g(rgba(#000,0), rgba(#000,.6))
+	img
+		position: absolute
+		left: 50%
+		top: 50%
+		+transform(translateX(-50%) translateY(-50%))
+	.l-center
+		position: relative
+		height: 235px
+		z-index: 3
+	&__title
+		position: absolute
+		bottom: 19px
+		left: 10px
+		right: 10px
+		font-size: 36px
+		color: #fff 
+
+.breadcrumbs-wrap
+	background: #f3f3f3
+	
+.breadcrumbs
+	margin: 0 0 22px 
+	color: #8c8d8d 
+	font-size: 11px
+	+clr
+	a, span
+		float: left
+		margin-right: 16px
+		position: relative
+		height: 27px
+		line-height: 27px
+		+tr_c
+		&:before
+			content: "\f105"
+			position: absolute
+			left: -9px
+			top: 8px
+			+fa
+			font-size: 12px
+	a
+		color: #333 
+		&:hover
+			color: $link 
+		&:first-child
+			&:before
+				display: none
+				
+.l-cols
+	+clr
+.l-col
+	float: right
+	width: 47%
+	+r(1023)
+		float: none
+		width: 100%
+	&:first-child
+		float: left
+		+r(1023)
+			float: none
+		
+.accord
+	margin-bottom: 17px
+	background: #fff
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+	&_height
+		.accord__title
+			min-height: 98px
+			+r(767)
+				min-height: 70px
+	&__title
+		position: relative
+		padding: 15px 50px 15px 15px
+		font-size: 18px
+		cursor: pointer
+		+nosel
+		+tr_bgc
+		min-height: 54px
+		line-height: 1.3
+		+r(767)
+			min-height: 30px
+			padding: 10px 30px 10px 15px
+			font-size: 16px
+		&:hover
+			background: #f9f9f9 
+			color: $bg_l
+			&:after
+				color: $bg_l
+		&:active
+			background: darken(#f9f9f9, 5%)
+		&:after
+			content: "\f107"
+			position: absolute
+			right: 17px
+			top: 50%
+			margin-top: -9px
+			+fa 
+			font-size: 18px
+			color: $link 
+			+tr_c
+			+tr(transform .2s)
+		&.is-active
+			&:after
+				+rotate(-180)
+		span
+			display: block
+			margin-bottom: 2px
+			color: #8c8d8d
+			font-size: 14px 
+	&__body
+		display: none
+		padding: 15px  
+		.file-icon
+			margin-left: 5px
+		.text
+			padding-bottom: 5px
+			&:before
+				content: ""
+				position: absolute
+				left: 0
+				top: -18px
+				width: 22px
+				height: 2px
+				background: $link
+.file
+	margin-bottom: 15px
+	&__link
+		display: inline-block
+		position: relative
+		padding-left: 40px
+		color: $text
+		+tr_c
+		&:hover
+			color: $link 
+	.file-icon
+		position: absolute
+		left: 0
+		top: -4px
+.file-icon
+	display: inline-block
+	position: relative
+	+svg(file,17,23)
+	&_pdf
+		i
+			background: $link
+	&_doc
+		i
+			background: #4498ce
+	&_dwg
+		i
+			background: #8c8d8d 
+	i
+		position: absolute
+		left: -5px
+		right: -5px
+		bottom: 4px
+		height: 11px
+		line-height: 11px
+		text-align: center
+		font-size: 8px
+		color: #fff
+		text-transform: uppercase 
+		border-radius: 2px 
+		font-style: normal
+		
+.text
+	position: relative
+	line-height: 1.8
+	font-size: 13px
+	color: $text
+	p
+		margin-bottom: 10px

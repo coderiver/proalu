@@ -38,17 +38,6 @@ head.ready(function() {
 		$(this).toggleClass("is-active");
 	});
 
-	// $(".js-lang").on("touchstart click", function(){
-	// 	if ($(this).hasClass("is-active")) {
-	// 		$(this).removeClass("is-active");
-	// 	}
-	// 	else {
-	// 		$(this).addClass("is-active");
-	// 	}
-		
-	// 	return false;
-	// });
-
 	$(".js-lang > a").on("click", function(){
 		if ($(this).hasClass("is-active")) {
 			$(this).removeClass("is-active");
@@ -59,4 +48,24 @@ head.ready(function() {
 		//event.stopPropagation();
 		return false;
 	});
+
+	// accordeon		
+	$(".js-accord-toggle").on("click",function () {
+		var group = $(this).parents(".js-accord-group");
+		var accord = $(this).parents(".js-accord");
+		if ($(this).hasClass("is-active")) {
+			$(this).removeClass("is-active");
+			accord.find(".js-accord-list").slideUp(200);
+		}
+		else {
+			group.find(".js-accord-toggle").removeClass("is-active");
+			$(this).addClass("is-active");
+			group.find(".js-accord-list").slideUp(200);
+			accord.find(".js-accord-list").slideDown(200);
+		}
+		
+	    
+	    
+	});
+
 });

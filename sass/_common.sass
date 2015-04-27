@@ -57,6 +57,12 @@
 	+tr(color .2s)
 =tr_o
 	+tr(opacity .2s)
+=fa
+	font-family: FontAwesome
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	transform: translate(0, 0)
 $link: #eb4200
 $link_d: #333
 $bg: #8c8d8d
@@ -91,11 +97,19 @@ body
 a
 	text-decoration: none
 .out
-	padding-top: 73px
+	padding: 73px 0 90px
+	margin: 0 0 -110px
+	position: relative
+	min-height: 100%
+	height: auto !important
+	height: 100%
 	+r(1023)
-		padding-top: 60px
+		padding: 60px 0 40px
 	&_index
 		background: $light 
+.push
+	clear: both
+	height: 110px
 .wrap
 	+clr
 // common blocks      
@@ -413,6 +427,10 @@ a
 	span
 		+transition(top .2s, transform .2s)
 .footer
+	position: relative
+	z-index: 2
+	min-height: 110px
+	overflow: hidden
 	background: $bg_l
 	color: #fff
 	font-size: 11px
@@ -482,6 +500,9 @@ a
 				display: table-cell
 			&:first-child
 				margin-left: 0
+			&.is-active
+				a
+					background: #7c7c7c
 		a
 			display: block
 			padding: 0 15px 
@@ -532,7 +553,7 @@ a
 			width: 30px
 			height: 30px
 			text-align: center
-			line-height: 30px
+			line-height: 28px
 			background: #7c7c7c
 			border-radius: 50%  
 			+tr_bg
@@ -591,7 +612,7 @@ a
 		table-layout: fixed
 	&__meta
 		display: table-cell
-		padding: 7px 0 
+		padding: 9px 0 
 		vertical-align: middle
 		span
 			display: inline-block
@@ -607,7 +628,7 @@ a
 				opacity: 0.8
 	&__copyright
 		display: table-cell
-		padding: 7px 0 
+		padding: 9px 0 
 		text-align: right
 		vertical-align: middle
 		span
@@ -636,7 +657,7 @@ a
 	&:hover
 		background: #000
 	&:active
-		right: 20px
+		right: 41px
 	
 
 
