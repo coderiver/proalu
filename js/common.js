@@ -1,8 +1,8 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	$(document).on("touchstart click", function(){
+		$(".js-lang").removeClass("is-active");
+	});
 
 	// function scrollFixedElements() {
 	//     var scroll_left = $(this).scrollLeft();
@@ -36,5 +36,27 @@ head.ready(function() {
 	$(".js-toggle-nav").on("click", function(){
 		$("html").toggleClass("has-open-nav");
 		$(this).toggleClass("is-active");
+	});
+
+	// $(".js-lang").on("touchstart click", function(){
+	// 	if ($(this).hasClass("is-active")) {
+	// 		$(this).removeClass("is-active");
+	// 	}
+	// 	else {
+	// 		$(this).addClass("is-active");
+	// 	}
+		
+	// 	return false;
+	// });
+
+	$(".js-lang > a").on("click", function(){
+		if ($(this).hasClass("is-active")) {
+			$(this).removeClass("is-active");
+		}
+		else {
+			$(this).addClass("is-active");
+		}
+		//event.stopPropagation();
+		return false;
 	});
 });

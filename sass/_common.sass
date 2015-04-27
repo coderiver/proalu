@@ -198,7 +198,8 @@ a
 	+tr_bg
 	+r(1023)
 		margin-right: 60px
-	&:hover
+	&:hover,
+	&.is-active
 		background: $bg
 		.lang__active
 			color: #fff 
@@ -440,6 +441,8 @@ a
 				margin-bottom: 10px
 			img
 				display: block
+				&:hover
+					+box-shadow(0 0 20px rgba(0, 0, 0, 0.2))
 		span
 			display: inline-block
 			vertical-align: middle
