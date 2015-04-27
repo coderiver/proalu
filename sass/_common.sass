@@ -63,6 +63,11 @@
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	transform: translate(0, 0)
+=link
+	color: $link 
+	+tr_c
+	&:hover
+		color: $link_h 
 $link: #eb4200
 $link_h: #e03e00
 $link_d: #333
@@ -348,6 +353,10 @@ a
 			padding: 0
 	.nav__item
 		margin-bottom: 5px
+		&.is-active
+			background: $link
+			a
+				color: #fff
 	.nav__link
 		height: 50px
 		line-height: 50px

@@ -49,11 +49,14 @@
 		height: 27px
 		line-height: 27px
 		+tr_c
+		+r(1024)
+			height: 40px
+			line-height: 40px
 		&:before
 			content: "\f105"
 			position: absolute
 			left: -9px
-			top: 8px
+			top: 13px
 			+fa
 			font-size: 12px
 	a
@@ -189,16 +192,15 @@
 	p
 		margin-bottom: 10px
 	a
-		color: $link 
-		+tr_c
-		&:hover
-			color: $link_h 
+		+link
 .title
 	position: relative
 	margin: 35px 0 45px
 	font-size: 24px
 	font-weight: normal
 	color: $text 
+	+r(768)
+		font-size: 18px
 	&:after
 		content: "" 
 		position: absolute
@@ -221,10 +223,7 @@
 			left: 0
 			+svg(arr-r,15,9) 
 	a
-		color: $link 
-		+tr_c
-		&:hover
-			color: $link_h 
+		+link
 			
 .error-page
 	position: relative
@@ -312,3 +311,42 @@
 			+r(768)
 				width: 100%
 				margin-bottom: 10px
+
+.post
+	font-size: 15px
+	line-height: 1.6
+	color: $text 
+	+r(768)
+		font-size: 14px
+	dl
+		overflow: hidden
+		dt
+			float: left
+			min-height: 1px
+			padding-right: 20px
+			width: 167px
+			font-size: 14px
+			font-weight: bold
+			text-transform: uppercase
+			+r(1024)
+				float: none
+				width: 100%
+				margin-bottom: 10px
+		dd
+			overflow: hidden
+			margin-bottom: 23px
+	img
+		float: right
+		margin-left: 5%	
+		+r(1024)
+			max-width: 40%
+		+r(768)
+			float: none
+			margin: 0 0 20px
+			display: block
+			width: 100%
+			max-width: 100%
+	a
+		+link
+	p
+		margin-bottom: 24px
