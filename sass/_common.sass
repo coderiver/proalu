@@ -78,6 +78,9 @@ $text_l: #999
 $title: #444
 $light: #f3f3f3
 $border: #ddd
+html
+	+selection
+		background: rgba(0,0,0,.1)
 .has-open-nav
 	overflow: hidden
 	.nav_drop
@@ -123,6 +126,71 @@ a
 	height: 110px
 .wrap
 	+clr
+
+.l-cols
+	+clr
+.l-col
+	float: right
+	width: 47%
+	+r(1024)
+		float: none
+		width: 100%
+	&:first-child
+		float: left
+		+r(1024)
+			float: none
+.l-col-fixed
+	float: left
+	width: 264px
+	+r(768)
+		float: none
+		margin-bottom: 20px
+		width: 100%
+.l-col-liquid
+	margin-left: 264px
+	padding-left: 28px
+	+r(768)
+		padding-left: 0
+		margin: 0
+.l-cols_mod
+	.l-col-fixed
+		float: right
+		padding-left: 20px
+		width: 228px
+		+r(768)
+			padding-left: 0
+			float: none
+			width: 100%
+	.l-col-liquid
+		margin: 0 228px 0 0
+		padding-left: 0
+		+r(768)
+			margin: 0
+.cols-wrap
+	font-size: 0
+	margin: 0 -7px 0 -8px
+	
+.col
+	display: inline-block
+	vertical-align: bottom
+	padding: 0 7px 0 8px
+	&:last-child
+		+r(1024)
+			margin: 0
+	&_22
+		width: 22%
+		+r(1024)
+			margin-bottom: 15px
+			width: 100%
+			display: block
+			padding: 0
+	&_34
+		width: 34%
+		+r(1024)
+			margin-bottom: 15px
+			width: 100%
+			display: block
+			padding: 0
 // common blocks      
 .header
 	position: fixed
@@ -332,6 +400,7 @@ a
 	display: none
 	+tr(transform .3s)
 	+transform(translateY(-150%))
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1) 
 	+r(1024)
 		display: block
 		position: fixed
@@ -343,19 +412,21 @@ a
 		bottom: 0
 		width: 320px
 		overflow-y: auto
+		overflow-x: hidden
 		background: #fff 
 	.nav__drop
 		position: static
 		opacity: 1
 		visibility: visible
 		padding: 5px 0 
+		background: #fff 
 		.l-center
 			padding: 0
 	.nav__item
 		margin-bottom: 5px
 		&.is-active
 			background: $link
-			a
+			.nav__link
 				color: #fff
 	.nav__link
 		height: 50px
@@ -369,9 +440,11 @@ a
 			display: none
 		a
 			display: block
-			padding: 10px 30px
+			color: $text 
+			padding: 8px 30px
 			&:hover
 				background: darken($bg, 5%)
+				color: #fff 
 .items-small-wrap
 	font-size: 0
 .item-small
@@ -470,6 +543,7 @@ a
 			order: 3
 		+r(480)
 			text-align: center
+			margin-right: 0
 		a
 			display: inline-block
 			vertical-align: middle
@@ -487,6 +561,8 @@ a
 			line-height: 1.1
 			+r(768)
 				max-width: 100%
+			+r(480)
+				margin-left: 0
 	&__menu
 		float: left
 		+r(1024)
@@ -549,7 +625,7 @@ a
 			padding-top: 0
 		+r(480)
 			width: 50%
-			margin: 0 0 10px
+			margin: 0 0 15px
 		a
 			display: inline-block
 			font-size: 12px
@@ -587,6 +663,7 @@ a
 			float: none
 			padding: 0
 			clear: both
+			text-align: center
 		&:before,
 		&:after
 			content: ""
@@ -607,18 +684,12 @@ a
 		background: #3a5795
 		font-size: 12px
 		+tr_bg
-		+r(480)
-			display: block
 		&:hover
 			background: #304b86 
 		span
 			margin-left: 7px
 			border-left: 1px solid #6179aa
 			padding-left: 7px
-			+r(480)
-				position: absolute
-				top: 8px
-				right: 12px
 		.fa
 			margin-right: 10px
 	&__bottom
@@ -673,38 +744,153 @@ a
 		background: #000
 	&:active
 		right: 41px
-	
 
+.form
+	margin-bottom: 24px
+	border: 1px solid $border
+	&__head
+		position: relative
+		padding: 15px 
+		color: $text
+		font-size: 13px
+		font-weight: bold
+		text-transform: uppercase
+		background: $light 
+		&:after
+			content: ""
+			position: absolute
+			top: 100%
+			left: 16px
+			+arr(26,6,$light,b)
+	&__body
+		padding: 13px 15px 18px
+		.field
+			&:last-child
+				margin-bottom: 0
+.form-action
+	+clr
+	&__left
+		float: left
+		width: 50%
+	&__right
+		float: right
+		width: 50%
+		text-align: right
+.field
+	display: block
+	margin-bottom: 15px
+	&__title
+		display: block
+		margin-bottom: 3px
+		font-size: 13px
+		color: #8c8d8d 
+	&__body
+.info-text
+	color: #8c8d8d
+	span
+		color: $text 
+.select
+	position: relative
+	z-index: 2
+	cursor: pointer
+	font-size: 13px
+	color: $text 
+	border: 1px solid $border
+	select
+		display: none
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 31px
+		+font
+		font-size: 13px
+		opacity: 0
+		+r(1024)
+			display: block
+			z-index: 4
+	&.is-active
+		.select__text
+			&:after
+				+rotate(-180)
+.select__text
+	position: relative
+	z-index: 3
+	display: block
+	padding: 0 30px 0 15px 
+	height: 29px
+	line-height: 29px
+	white-space: nowrap
+	overflow: hidden
+	background: #fff 
+	text-overflow: ellipsis
+	+nosel
+	&:after
+		content: "\f107"
+		position: absolute
+		right: 10px
+		top: 8px
+		+fa
+		font-size: 14px
+		color: #8c8d8d 
+		+tr(transform .3s)
+.select__list
+	position: absolute
+	display: none
+	left: -3px
+	right: -1px
+	top: -1px
+	z-index: 2
+	border-top: 0 
+	padding: 30px 0 6px 
+	max-height: 200px
+	overflow-y: auto
+	background: #fff
+	border: 1px solid $border
+	box-shadow: 0 0 10px rgba(#000, 0.1)
+	+r(1024)
+		display: none !important
+	+scrollbar
+		width: 4px
+		height: 4px
+		background: #fff
+	+scrollbar-thumb
+		background: $border
+	li
+		padding: 7px 15px 
+		cursor: pointer
+		line-height: 1
+		&:hover
+			color: #939494 
 
+.input
+	display: block
+	border: 1px solid $border
+	padding: 0 15px 
+	width: 100%
+	height: 31px
+	background: #fff
+	+font
+	font-size: 13px
+	color: $text 
+	+tr(border .2s)
+	&:focus
+		border-color: #AFC5F6 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn
+	display: inline-block
+	padding: 14px 36px 13px
+	line-height: 1
+	font-size: 13px 
+	+font
+	text-transform: uppercase
+	background: $link 
+	color: #fff 
+	+transition(border-radius .2s, background .2s)
+	&:hover
+		border-radius: 40px 
+	&:active
+		background: $link_h 
 
 
 
