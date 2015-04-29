@@ -159,6 +159,11 @@
 		position: absolute
 		left: 0
 		top: -4px
+	&_marked
+		font-size: 15px
+		.file__link
+			+link
+	
 .file-icon
 	display: inline-block
 	position: relative
@@ -381,8 +386,6 @@
 .colors-wrap
 	font-size: 0
 	margin-right: -4px	
-	padding: 0 35px 0 0
-	border-right: 1px solid $border 
 	+r(768)
 		border: 0
 		margin-right: 0
@@ -420,6 +423,13 @@
 	
 .panel
 	margin-bottom: 5px
+	&.is-active
+		.panel__title
+			background: $link
+			color: #fff  
+			&:after
+				+rotate(-180)
+				color: #fff 
 	&__title
 		position: relative
 		padding: 6px 28px 6px 12px 
@@ -444,12 +454,6 @@
 			color: #fff 
 			&:after
 				color: #fff  
-		&.is-active
-			background: $link
-			color: #fff  
-			&:after
-				+rotate(-180)
-				color: #fff 
 	&__body
 		padding: 10px 0
 		display: none
@@ -530,3 +534,85 @@
 				+svg(caret-r-white,9,17)
 			&:after
 				+svg(caret-r-orange,9,17)
+
+.article
+	margin-bottom: 52px
+	border-bottom: 1px solid $border 
+	padding-bottom: 16px
+	font-size: 15px
+	color: $text 
+	line-height: 1.6
+	a
+		+link
+	p
+		margin-bottom: 25px
+.gallery
+	margin: 0 0 33px 
+	.fotorama
+		&__nav-wrap
+			margin-bottom: 14px
+		&__thumb-border
+			border-color: $link 
+		&__arr 
+			width: 66px
+			height: 66px
+			text-align: center
+			line-height: 66px
+			background: rgba(#000, .3)
+			+transition(background, opacity, .2s)
+			&:hover
+				background: rgba(#000, .9)
+			&:before
+				content: ""
+				display: inline-block
+				vertical-align: middle
+		&__arr--prev
+			&:before
+				+svg(caret-l-big,23,43)
+		&__arr--next
+			&:before
+				+svg(caret-r-big,23,43)
+.slider
+	font-size: 0
+.el
+	display: inline-block
+	vertical-align: top
+	width: 25%
+	overflow: hidden
+	&__img	
+		padding-right: 1px
+		height: 175px
+		background: #f3f3f3
+		overflow: hidden 
+		img
+			margin: 0 auto 
+			height: 100%
+			width: auto
+	&__body
+		position: relative
+		padding: 17px 20px 0 0
+		z-index: 2
+		font-size: 13px
+		color: #7c7c7c
+		&:before
+			content: ""
+			position: absolute
+			top: -8px
+			left: 16px
+			+arr(20,8,#fff,t)
+	&__title
+		position: relative
+		margin-bottom: 8px
+		padding-bottom: 11px
+		font-size: 13px
+		font-weight: bold
+		text-transform: uppercase
+		color: $text 
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			bottom: 0 
+			width: 38px
+			height: 2px
+			background: #a9aaaa 

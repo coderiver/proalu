@@ -57,17 +57,21 @@ head.ready(function() {
 	$(".js-accord-toggle").on("click",function () {
 		var group = $(this).parents(".js-accord-group");
 		var accord = $(this).parents(".js-accord");
-		if ($(this).hasClass("is-active")) {
-			$(this).removeClass("is-active");
+		if (accord.hasClass("is-active")) {
+			accord.removeClass("is-active");
 			accord.find(".js-accord-list").slideUp(200);
 		}
 		else {
-			group.find(".js-accord-toggle").removeClass("is-active");
-			$(this).addClass("is-active");
+			group.find(".js-accord").removeClass("is-active");
+			accord.addClass("is-active");
 			group.find(".js-accord-list").slideUp(200);
 			accord.find(".js-accord-list").slideDown(200);
 		}
 	    
+	});
+
+	$(".js-accord-group").each(function(){
+		$(this).find(".js-accord.is-active .js-accord-list").show();
 	});
 
 // select list
@@ -136,4 +140,34 @@ head.ready(function() {
 			return false;
 	    });
 
+// init slick slider
+	$(".js-slick-slider").slick({
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		adaptiveHeight: true,
+		responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3
+		      }
+		    },
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		]
+	})
 });
