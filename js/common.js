@@ -133,10 +133,17 @@ head.ready(function() {
 			var group = $("."+tabs.attr("data-group"));
 			var tabsCont = group.find(".js-tabs-content");
 			var index = $(this).parent().index();
+			var top = group.offset().top - 80;
 			tabs.find("li").removeClass("is-active");
 	      	$(this).parent().addClass("is-active");
 			tabsCont.hide();
 			tabsCont.eq(index).show();
+			if ($(window).width() <= 1024) {
+				$("html, body").animate({
+				    scrollTop: top
+				}, 500);
+			}
+			
 			return false;
 	    });
 

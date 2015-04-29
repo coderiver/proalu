@@ -1,7 +1,6 @@
 .page-head
 	position: relative
 	overflow: hidden
-	height: 235px
 	&:before,
 	&:after
 		content: ""
@@ -21,21 +20,30 @@
 		position: absolute
 		top: 0
 		left: 0
-		width: 100%
-		height: auto
-		+r(1920)
-			position: absolute
-			left: 50%
-			top: 50%
-			width: auto
-			+transform(translateX(-50%) translateY(-50%))
-		+r(1024)
-			height: 100%
-			width: auto
+		min-width: 100%		
+		min-height: 100%		
+		// width: 100%
+		// height: auto
+		// +r(1920)
+		// 	position: absolute
+		// 	left: 50%
+		// 	top: 50%
+		// 	width: auto
+		// 	+transform(translateX(-50%) translateY(-50%))
+		// +r(1024)
+		// 	height: 100%
+		// 	width: auto
+		// +r(768)
+		// 	position: absolute
+		// 	top: 0
+		// 	left: 0
+		// 	+transform(translateX(0) translateY(0))
 	.l-center
 		position: relative
 		height: 235px
 		z-index: 3
+		+r(768)
+			height: 180px
 	&__title
 		position: absolute
 		bottom: 19px
@@ -216,7 +224,10 @@
 		width: 65px
 		height: 2px
 		background: $link 
-		
+	&_big
+		font-size: 30px
+		+r(768)
+			font-size: 20px
 .list-links
 	line-height: 1.8
 	li
@@ -360,14 +371,18 @@
 
 .tabs
 	+clr
-	margin: 45px 0 25px
+	margin: 45px 0 15px
 	padding-right: 1px 
 	overflow: hidden
 	li
 		float: left
 		width: 20%
+		margin-bottom: 10px
 		+r(1024)
 			width: 33.333%
+		+r(768)
+			width: 100%
+			
 		&.is-active,
 		&:hover
 			a
@@ -376,13 +391,19 @@
 				color: #fff 
 	a
 		display: block
+		padding: 0 10px 
 		margin-right: -1px
 		height: 45px
 		line-height: 45px
-		text-align: center
+		+vertical
 		border: 1px solid $border
 		color: $bg 
 		+tr_bgc
+		span
+			display: inline-block
+			vertical-align: middle
+			line-height: 1.1
+			font-size: 13px
 .colors-wrap
 	font-size: 0
 	margin-right: -4px	
@@ -420,7 +441,8 @@
 
 .tabs-content
 	display: none
-	
+	.article
+		border: 0
 .panel
 	margin-bottom: 5px
 	&.is-active
@@ -542,13 +564,17 @@
 	font-size: 15px
 	color: $text 
 	line-height: 1.6
-	a
+	&:last-child
+		border: 0
+	> a
 		+link
-	p
+	> p
 		margin-bottom: 25px
 .gallery
 	margin: 0 0 33px 
 	.fotorama
+		&__stage
+			background: #f3f3f3 
 		&__nav-wrap
 			margin-bottom: 14px
 		&__thumb-border
@@ -567,27 +593,49 @@
 				display: inline-block
 				vertical-align: middle
 		&__arr--prev
+			left: 15px
 			&:before
 				+svg(caret-l-big,23,43)
 		&__arr--next
+			right: 15px
 			&:before
 				+svg(caret-r-big,23,43)
 .slider
+	font-size: 0
+	.el
+		&__img
+			border: 1px solid $border
+			border-right: #000
+.el-wrap
 	font-size: 0
 .el
 	display: inline-block
 	vertical-align: top
 	width: 25%
 	overflow: hidden
+	&_simple
+		margin: 0 -1px -1px 0
+		border: 1px solid $border
+		width: 33.3% 
+		width: calc(100% / 3)
+		+r(1024)
+			width: 50%
+		+r(480)
+			width: 100%
+		.el__title
+			&:after
+				display: none
+		.el__body
+			padding-left: 15px
 	&__img	
-		padding-right: 1px
+		display: block
 		height: 175px
 		background: #f3f3f3
 		overflow: hidden 
 		img
 			margin: 0 auto 
-			height: 100%
-			width: auto
+			min-width: 100%
+			min-height: 100%
 	&__body
 		position: relative
 		padding: 17px 20px 0 0
@@ -602,12 +650,16 @@
 			+arr(20,8,#fff,t)
 	&__title
 		position: relative
+		display: block
 		margin-bottom: 8px
 		padding-bottom: 11px
 		font-size: 13px
 		font-weight: bold
 		text-transform: uppercase
 		color: $text 
+		+tr_c
+		&:hover
+			color: $link 
 		&:after
 			content: ""
 			position: absolute
@@ -616,3 +668,62 @@
 			width: 38px
 			height: 2px
 			background: #a9aaaa 
+			
+.list-icon
+	font-size: 0
+	&_border
+		border-bottom: 1px solid $border 
+		padding-bottom: 27px
+	li
+		position: relative
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 20px
+		width: 33.3%
+		padding: 0 30px 0 65px
+		font-size: 13px
+		color: $text
+		+r(1024)
+			width: 100%
+			padding-right: 0
+		strong
+			text-transform: uppercase
+		p
+			margin-bottom: 10px
+	img
+		position: absolute
+		top: 0
+		left: 0
+		
+.images
+	font-size: 0
+	a
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 10px
+		width: 33.33%
+		height: 180px
+		border: 1px solid $border
+		border-left: 0
+		overflow: hidden
+		+vertical
+		background: #f3f3f3
+		+r(768)
+			width: 50%
+			height: 150px
+		+r(480)
+			height: 100px
+		&:nth-child(3n+1)
+			border-left: 1px solid $border
+			+r(768)
+				border-left: none
+		&:nth-child(2n)
+			+r(768)
+				border-left: 0
+	img
+		display: inline-block
+		vertical-align: middle
+		min-width: 100%
+		min-height: 100%
+		
+		
