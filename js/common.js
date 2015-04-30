@@ -182,5 +182,16 @@ head.ready(function() {
 		      }
 		    }
 		]
-	})
+	});
+
+	$(".js-fancybox-link").fancybox({
+		padding: 0,
+		nextEffect: 'fade',
+		prevEffect: 'fade'
+	});
+	$(".js-fancybox a").fancybox({
+		padding: 0,
+		nextEffect: 'fade',
+		prevEffect: 'fade'
+	});
 });

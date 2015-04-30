@@ -264,6 +264,7 @@ a
 				color: #fff 
 			.nav__drop
 				opacity: 1
+				min-height: 216px
 				visibility: visible
 		&.is-active
 			background: #fff 
@@ -277,7 +278,9 @@ a
 					right: -10px
 					height: 2px
 					background: $link  
-				 
+					+r(1160)
+						right: -5px
+						left: -5px
 	&__link
 		display: block
 		position: relative
@@ -440,6 +443,7 @@ a
 		opacity: 1
 		visibility: visible
 		padding: 5px 0 
+		min-height: 1px
 		background: #fff 
 		.l-center
 			padding: 0
@@ -483,7 +487,6 @@ a
 	display: inline-block
 	vertical-align: top
 	margin-left: 29px
-	min-height: 160px
 	width: 117px
 	font-size: 14px
 	color: #fff 
