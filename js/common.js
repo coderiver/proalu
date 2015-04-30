@@ -39,8 +39,14 @@ head.ready(function() {
 	$(".js-toggle-nav").on("click", function(){
 		$("html").toggleClass("has-open-nav");
 		$(this).toggleClass("is-active");
+		$(".js-nav-overlay").fadeToggle(200);
 	});
 
+	$(".js-nav-overlay").on("click", function(){
+		$("html").removeClass("has-open-nav");
+		$(".js-toggle-nav").removeClass("is-active");
+		$(this).fadeOut(200);
+	});
 // lang list
 	$(".js-lang > a").on("click", function(){
 		if ($(this).hasClass("is-active")) {

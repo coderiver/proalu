@@ -55,7 +55,10 @@
 			font-size: 30px
 .breadcrumbs-wrap
 	background: #f3f3f3
-	
+	+ .map
+		margin-top: -45px
+		+r(768)
+			margin-top: -20px
 .breadcrumbs
 	margin: 0 0 45px
 	color: #8c8d8d 
@@ -63,6 +66,7 @@
 	+clr
 	+r(768)
 		margin-bottom: 20px
+	
 	a, span
 		float: left
 		margin-right: 16px
@@ -398,7 +402,9 @@
 		+vertical
 		border: 1px solid $border
 		color: $bg 
-		+tr_bgc
+
+		+rmin(1024)
+			+tr_bgc
 		span
 			display: inline-block
 			vertical-align: middle
@@ -726,4 +732,151 @@
 		min-width: 100%
 		min-height: 100%
 		
+
+.map
+	height: 415px
+	height: 54vh
+	font-size: 13px
+	+font
+	color: $text 
+	+r(1024)
+		height: 40vh
+	&__window
+		strong
+			display: block
+			line-height: 1
+			font-size: 18px
+			font-weight: normal
+			color: #333 
+		span
+			display: block
+			margin-bottom: 5px
+			color: $bg 
+	.gm-style-iw
+		padding: 10px 
+		+ div
+			display: none !important
+.section
+	padding-bottom: 45px
+	background: #f3f3f3 
+	+r(1024)
+		padding: 15px 0
+.table-wrap
+	margin: 0 -15px 
+	+r(1024)
+		margin: 0		
+.table
+	display: table
+	margin-bottom: -15px
+	width: 100%
+	table-layout: fixed
+	border-spacing: 15px 
+	+r(1024)
+		display: block
+		margin: 0 0 15px
+	&__cell
+		display: table-cell
+		vertical-align: top
+		background: #fff 
+		+r(1024)
+			display: block
+			margin: 0 0 15px
+	&_form
+		margin-bottom: 0
+.card
+	padding: 23px 15px
+	background: #fff  
+	overflow: hidden
+	font-size: 13px
+	color: #333
+	span
+		color: $bg 
+	&__head
+		float: left
+		margin-right: -1px 
+		padding-right: 22px
+		width: 150px
+		border-right: 1px solid $border
+		+r(768)
+			float: none
+			width: 100%
+			margin: 0 0 10px
+			padding: 0 0 10px  
+			border-right: 0
+			border-bottom: 1px solid $border
+		strong, 
+		span
+			display: block
+			line-height: 1
+		strong
+			margin-bottom: 5px
+			font-weight: normal
+			font-size: 18px
+			&:last-child
+				margin-bottom: 0
+		span
+			margin-bottom: 8px
+	&__body
+		overflow: hidden
+		border-left: 1px solid $border 
+		padding-left: 30px
+		+r(768)
+			border: 0
+			padding-left: 0
+	&__list
+		li
+			margin-bottom: 8px
+			&:last-child
+				margin-bottom: 0
+		a
+			color: #333
+			+tr_c
+			&:hover
+				color: $link 
 		
+		em
+			font-style: normal
+			display: inline-block
+			width: 27px
+			
+	&__inline
+		li
+			position: relative
+			display: inline-block
+			padding-left: 30px
+			margin-left: 26px
+			vertical-align: middle
+			margin-bottom: 0
+			+r(1024)
+				display: block
+				margin: 0 0 8px
+				padding: 0
+			&:first-child
+				margin-left: 0
+				padding-left: 0
+				&:before
+					display: none
+			&:before
+				content: "|" 
+				position: absolute
+				left: 0
+				top: 0
+				color: $border 
+				+r(1024)
+					display: none
+
+.location-info
+	position: relative
+	display: inline-block
+	padding-left: 15px
+	color: #333
+	+tr_c
+	&:hover,
+	&.is-active
+		color: $link 
+	.fa
+		position: absolute
+		top: 3px
+		left: 0
+		font-size: 14px
+		color: $link 
