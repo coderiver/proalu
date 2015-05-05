@@ -629,7 +629,7 @@ a { text-decoration: none; }
 .gallery .fotorama__stage { background: #f3f3f3; }
 .gallery .fotorama__nav-wrap { margin-bottom: 14px; }
 .gallery .fotorama__thumb-border { border-color: rgba(0, 0, 0, 0.6); background: rgba(0, 0, 0, 0.6); }
-.gallery .fotorama__arr { width: 66px; height: 66px; text-align: center; line-height: 66px; background: rgba(0, 0, 0, 0.3); -moz-transition: background, opacity, 0.2s; -o-transition: background, opacity, 0.2s; -webkit-transition: background, opacity, 0.2s; transition: background, opacity, 0.2s; }
+.gallery .fotorama__arr { position: absolute; top: 50%; margin-top: -33px; width: 66px; height: 66px; text-align: center; line-height: 66px; background: rgba(0, 0, 0, 0.3); -moz-transition: background, opacity, 0.2s; -o-transition: background, opacity, 0.2s; -webkit-transition: background, opacity, 0.2s; transition: background, opacity, 0.2s; }
 .gallery .fotorama__arr:hover { background: rgba(0, 0, 0, 0.9); }
 .gallery .fotorama__arr:before { content: ""; display: inline-block; vertical-align: middle; }
 .gallery .fotorama__arr--prev { left: 15px; }
@@ -648,7 +648,9 @@ a { text-decoration: none; }
 @media only screen and (max-width: 480px) { .el_simple { width: 100%; } }
 .el_simple .el__title:after { display: none; }
 .el_simple .el__body { padding-left: 15px; }
-.el__img { display: block; height: 175px; background: #f3f3f3; overflow: hidden; }
+.el__img { display: block; position: relative; height: 175px; background: #f3f3f3; overflow: hidden; }
+.el__img:hover:after { opacity: 0.7; }
+.el__img:after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #000; opacity: 0; -moz-transition: opacity 0.2s; -o-transition: opacity 0.2s; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }
 .el__img img { margin: 0 auto; min-width: 100%; min-height: 100%; }
 .el__body { position: relative; padding: 17px 20px 0 0; z-index: 2; font-size: 13px; color: #7c7c7c; }
 .el__body:before { content: ""; position: absolute; top: -8px; left: 16px; width: 0px; height: 0px; border-style: solid; border-width: 0 10px 8px 10px; border-color: transparent transparent #fff transparent; }

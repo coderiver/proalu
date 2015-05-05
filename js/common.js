@@ -204,7 +204,6 @@ head.ready(function() {
 
 	$(".js-fotorama-prev").on("click", function() {
 		fotorama.show('<');
-		alert();
 		return false;
 	});
 	$(".js-fotorama-next").on("click", function() {
