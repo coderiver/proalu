@@ -338,28 +338,6 @@
 	background-color: rgba(255, 255, 255, 0.9)
 	padding: 5px 10px
 
-@-webkit-keyframes spinner
-	0%
-	-webkit-transform: rotate(0)
-	transform: rotate(0)
-	100%
-	-webkit-transform: rotate(360deg)
-	transform: rotate(360deg)
-
-
-@keyframes spinner
-	0%
-	-webkit-transform: rotate(0)
-	transform: rotate(0)
-	100%
-	-webkit-transform: rotate(360deg)
-	transform: rotate(360deg)
-
-
-.fotorama__wrap--css3 .fotorama__spinner
-	-webkit-animation: spinner 24s infinite linear
-	animation: spinner 24s infinite linear
-
 .fotorama__wrap--css3 .fotorama__html,.fotorama__wrap--css3 .fotorama__stage .fotorama__img
 	transition-property: opacity
 	transition-timing-function: linear
@@ -381,9 +359,6 @@
 	position: absolute
 	z-index: 10
 
-@-moz-document url-prefix()
-	.fotorama__active
-	box-shadow: 0 0 0 transparent
 
 
 .fotorama__arr,.fotorama__fullscreen-icon,.fotorama__video-close,.fotorama__video-play
