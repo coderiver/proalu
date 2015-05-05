@@ -69,7 +69,7 @@
 	&:hover
 		color: $link_h 
 $link: #eb4200
-$link_h: #e03e00
+$link_h: #c83b04
 $link_d: #333
 $bg: #8c8d8d
 $bg_l: #939494
@@ -122,6 +122,11 @@ a
 		margin: 0
 		padding: 0
 		height: 100vh
+		.page-head
+			&:before
+				display: none
+			&:after
+				z-index: 0
 .push
 	clear: both
 	height: 110px
@@ -533,22 +538,22 @@ a
 			display: block
 			width: auto
 			height: 100%
-	&__icon
-		margin-bottom: 4px
-		width: 117px
-		background: #7c7c7c
-		line-height: 117px
-		text-align: center 
-		+tr_bg
-		&:hover
-			.item-small__img
-				background: darken(#7c7c7c, 10%)
 		.fa
 			vertical-align: middle
 			font-size: 48px
 			color: #fff 
+	&__icon
+		
+		+tr_bg
+		
 	span
 		+transition(top .2s, transform .2s)
+.item-small_icon
+	.item-small__img
+		width: 117px
+		background: #7c7c7c
+		line-height: 117px
+		text-align: center 
 .footer
 	position: relative
 	z-index: 2

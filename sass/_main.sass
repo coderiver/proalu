@@ -12,7 +12,7 @@
 		position: relative
 		overflow: hidden
 		min-height: 360px
-		background: $bg 
+		background: #000 
 		height: calc(100vh - 73px)
 		+r(1024)
 			height: calc(100vh - 60px)
@@ -22,6 +22,7 @@
 		left: 0
 		right: 0
 		bottom: 0
+		opacity: 0.7
 		picture
 			position: absolute
 			bottom: 0
@@ -44,6 +45,7 @@
 	&__title
 		margin: 0 0 20px
 		font-size: 24px
+		text-shadow: 0 0 23px rgba(28, 16, 8, 0.35)
 		+r(1024)
 			font-size: 20px
 		strong
@@ -61,9 +63,10 @@
 		font-size: 14px
 		color: #fff
 		text-transform: uppercase 
-		+tr_bg
+		+transition(background, border-radius, .3s)
 		&:hover
 			background: #000 
+			border-radius: 44px 
 		.icon-currency
 			margin-right: 8px
 .menu-wrap
@@ -193,6 +196,9 @@
 		.item__img
 			&:before
 				background: rgba(#000,.5) 
+		.item__in
+			strong
+				color: $link
 	&__img
 		position: relative
 		height: 197px
@@ -231,6 +237,7 @@
 			font-weight: bold
 			color: #333
 			text-transform: uppercase 
+			+tr_c
 		span
 			color: $bg 
 .fotorama_items

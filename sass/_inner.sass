@@ -18,18 +18,13 @@
 		+g(rgba(#000,0), rgba(#000,.6))
 	img
 		position: absolute
-		top: 0
-		left: 0
-		min-width: 100%		
-		min-height: 100%		
-		// width: 100%
-		// height: auto
-		// +r(1920)
-		// 	position: absolute
-		// 	left: 50%
-		// 	top: 50%
-		// 	width: auto
-		// 	+transform(translateX(-50%) translateY(-50%))
+		left: 50%
+		top: 50%
+		width: 100%
+		min-height: 1px 
+		+transform(translateX(-50%) translateY(-50%))
+		+r(1920)
+			width: auto
 		// +r(1024)
 		// 	height: 100%
 		// 	width: auto
@@ -53,6 +48,8 @@
 		color: #fff 
 		+r(1024)
 			font-size: 30px
+		+r(768)
+			font-size: 24px
 .breadcrumbs-wrap
 	background: #f3f3f3
 	+ .map
@@ -175,6 +172,8 @@
 		font-size: 15px
 		.file__link
 			+link
+			&:hover
+				color: $text
 	
 .file-icon
 	display: inline-block
@@ -210,14 +209,16 @@
 	color: $text
 	p
 		margin-bottom: 10px
-	a
-		+link
+		a
+			+link
+			&:visited
+				color: $link_h 
 .title
 	position: relative
 	margin: 35px 0 45px
 	font-size: 24px
 	font-weight: normal
-	color: $text 
+	color: $link_d 
 	+r(768)
 		font-size: 18px
 	&:after
@@ -349,6 +350,7 @@
 			width: 167px
 			font-size: 14px
 			font-weight: bold
+			color: $link_d 
 			text-transform: uppercase
 			+r(1024)
 				float: none
@@ -368,10 +370,13 @@
 			display: block
 			width: 100%
 			max-width: 100%
-	a
-		+link
+	
 	p
 		margin-bottom: 24px
+		a
+			+link
+			&:visited
+				color: $link_h 
 
 .tabs
 	+clr
@@ -572,19 +577,68 @@
 	line-height: 1.6
 	&:last-child
 		border: 0
-	> a
-		+link
 	> p
 		margin-bottom: 25px
+		a
+			+link
+			&:visited
+				color: $link_h 
+	+ .images
+		margin-top: -57px
 .gallery
 	margin: 0 0 33px 
+	position: relative
+	&__nav
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+		height: 110px
+		width: 15px
+		text-align: center
+		background: #fff 
+		&:last-child
+			left: auto
+			right: 0
+		&:hover
+			i
+				background: none
+				&:after
+					opacity: 1
+				&:before
+					opacity: 0
+		i
+			display: inline-block
+			position: relative
+			vertical-align: middle
+			width: 9px
+			height: 17px
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				left: 0
+				top: 0
+			&:after
+				opacity: 0
+		.icon-caret-l
+			&:before
+				+svg(caret-l,9,17)
+			&:after
+				+svg(caret-l-orange,9,17)
+		.icon-caret-r
+			&:before
+				+svg(caret-r,9,17)
+			&:after
+				+svg(caret-r-orange,9,17)
 	.fotorama
 		&__stage
 			background: #f3f3f3 
 		&__nav-wrap
 			margin-bottom: 14px
 		&__thumb-border
-			border-color: $link 
+			border-color: rgba(#000,.6) 
+			background: rgba(#000,.6) 
 		&__arr 
 			width: 66px
 			height: 66px
