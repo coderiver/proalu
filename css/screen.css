@@ -336,7 +336,7 @@ a { text-decoration: none; }
 .banner__img img { display: block; width: 100%; height: auto; }
 @media only screen and (max-width: 1366px) { .banner__img img { width: auto; height: 100%; } }
 .banner .l-center { position: relative; z-index: 2; height: 100%; padding-top: 11%; }
-.banner__title { margin: 0 0 20px; font-size: 24px; text-shadow: 0 0 23px rgba(28, 16, 8, 0.35); }
+.banner__title { margin: 0 0 20px; font-size: 24px; text-shadow: 0 0 23px #1c1008; }
 @media only screen and (max-width: 1024px) { .banner__title { font-size: 20px; } }
 .banner__title strong { display: block; font-size: 36px; }
 @media only screen and (max-width: 1024px) { .banner__title strong { font-size: 30px; } }
@@ -627,7 +627,7 @@ a { text-decoration: none; }
 .gallery__nav .icon-caret-r:before { background: url("../img/svg/caret-r.svg") no-repeat 0 0; -moz-background-size: 9px 17px; -o-background-size: 9px 17px; -webkit-background-size: 9px 17px; background-size: 9px 17px; width: 9px; height: 17px; display: inline-block; }
 .gallery__nav .icon-caret-r:after { background: url("../img/svg/caret-r-orange.svg") no-repeat 0 0; -moz-background-size: 9px 17px; -o-background-size: 9px 17px; -webkit-background-size: 9px 17px; background-size: 9px 17px; width: 9px; height: 17px; display: inline-block; }
 .gallery .fotorama__stage { background: #f3f3f3; }
-.gallery .fotorama__nav-wrap { margin-bottom: 14px; }
+.gallery .fotorama__nav-wrap { margin: 0 15px 14px; }
 .gallery .fotorama__thumb-border { border-color: rgba(0, 0, 0, 0.6); background: rgba(0, 0, 0, 0.6); }
 .gallery .fotorama__arr { position: absolute; top: 50%; margin-top: -33px; width: 66px; height: 66px; text-align: center; line-height: 66px; background: rgba(0, 0, 0, 0.3); -moz-transition: background, opacity, 0.2s; -o-transition: background, opacity, 0.2s; -webkit-transition: background, opacity, 0.2s; transition: background, opacity, 0.2s; }
 .gallery .fotorama__arr:hover { background: rgba(0, 0, 0, 0.9); }
