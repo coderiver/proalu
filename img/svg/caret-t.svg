@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="8" height="5" viewBox="0 0 8 5">
-  <defs>
-    <style>
-
-      .cls-2 {
-        fill: #ffffff;
-      }
-    </style>
-  </defs>
-  <path d="M3.470,-0.000 C3.596,-0.000 3.721,0.048 3.817,0.144 C3.817,0.144 6.826,3.163 6.826,3.163 C7.018,3.355 7.018,3.667 6.826,3.858 C6.635,4.051 6.325,4.051 6.133,3.858 C6.133,3.858 3.470,1.187 3.470,1.187 C3.470,1.187 0.807,3.858 0.807,3.858 C0.616,4.050 0.305,4.050 0.114,3.858 C-0.078,3.666 -0.078,3.355 0.114,3.163 C0.114,3.163 3.124,0.144 3.124,0.144 C3.219,0.048 3.345,-0.000 3.470,-0.000 Z" id="path-1" class="cls-2" fill-rule="evenodd"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="8" height="5" viewBox="0 0 8 5"><defs><style>.cls-2 { fill: #ffffff; }</style></defs><path d="M3.47 0c.126 0 .251.048.347.144l3.009 3.019c.192.192.192.504 0 .695-.191.193-.501.193-.693 0l-2.663-2.671-2.663 2.671c-.191.192-.502.192-.693 0-.192-.192-.192-.503 0-.695l3.01-3.019c.095-.096.221-.144.346-.144z" id="path-1" class="cls-2" fill-rule="evenodd"/></svg>
