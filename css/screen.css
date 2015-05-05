@@ -397,7 +397,7 @@ a { text-decoration: none; }
 .fotorama_items .item { width: 100%; }
 .fotorama_items .fotorama__shadows--right { border-style: none !important; }
 .fotorama_items .fotorama__nav--dots { display: none; }
-.fotorama_items .fotorama__arr { bottom: 64px; top: auto; left: auto; margin: 0; width: 30px; height: 30px; line-height: 30px; background: #fff; border: 1px solid #ddd; -moz-transform: translate3d(0, 0, 0) !important; -ms-transform: translate3d(0, 0, 0) !important; -webkit-transform: translate3d(0, 0, 0) !important; transform: translate3d(0, 0, 0) !important; opacity: 1 !important; text-align: center; -moz-transition: background 0.2s, border 0.2s; -o-transition: background 0.2s, border 0.2s; -webkit-transition: background 0.2s, border 0.2s; transition: background 0.2s, border 0.2s; }
+.fotorama_items .fotorama__arr { position: absolute; bottom: 64px; top: auto; left: auto; margin: 0; width: 30px; height: 30px; line-height: 30px; background: #fff; border: 1px solid #ddd; -moz-transform: translate3d(0, 0, 0) !important; -ms-transform: translate3d(0, 0, 0) !important; -webkit-transform: translate3d(0, 0, 0) !important; transform: translate3d(0, 0, 0) !important; opacity: 1 !important; text-align: center; -moz-transition: background 0.2s, border 0.2s; -o-transition: background 0.2s, border 0.2s; -webkit-transition: background 0.2s, border 0.2s; transition: background 0.2s, border 0.2s; }
 .fotorama_items .fotorama__arr:hover { background: #eb4200; border-color: #eb4200; }
 .fotorama_items .fotorama__arr:hover:after { opacity: 1; }
 .fotorama_items .fotorama__arr:hover:before { opacity: 0; }
