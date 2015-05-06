@@ -649,8 +649,8 @@ a { text-decoration: none; }
 .el_simple .el__title:after { display: none; }
 .el_simple .el__body { padding-left: 15px; }
 .el__img { display: block; position: relative; height: 175px; background: #f3f3f3; overflow: hidden; }
-.el__img:hover:after { opacity: 0.7; }
-.el__img:after { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #000; opacity: 0; -moz-transition: opacity 0.2s; -o-transition: opacity 0.2s; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }
+.el__img:hover:after { opacity: 0.5; }
+.el__img:after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #000; opacity: 0; -moz-transition: opacity 0.2s; -o-transition: opacity 0.2s; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }
 .el__img img { margin: 0 auto; min-width: 100%; min-height: 100%; }
 .el__body { position: relative; padding: 17px 20px 0 0; z-index: 2; font-size: 13px; color: #7c7c7c; }
 .el__body:before { content: ""; position: absolute; top: -8px; left: 16px; width: 0px; height: 0px; border-style: solid; border-width: 0 10px 8px 10px; border-color: transparent transparent #fff transparent; }
