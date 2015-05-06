@@ -23,8 +23,11 @@
 		width: 100%
 		min-height: 1px 
 		+transform(translateX(-50%) translateY(-50%))
-		+r(1920)
+		+r(640)
 			width: auto
+			min-height: 100%
+		// +r(1920)
+		// 	width: auto
 		// +r(1024)
 		// 	height: 100%
 		// 	width: auto
@@ -58,22 +61,24 @@
 			margin-top: -20px
 .breadcrumbs
 	margin: 0 0 45px
+	padding: 0 10px 0 0 
 	color: #8c8d8d 
-	font-size: 11px
+	font-size: 0
 	+clr
+	+text-overflow
 	+r(768)
 		margin-bottom: 20px
 	
 	a, span
-		float: left
+		display: inline-block
+		vertical-align: middle
+		padding: 6px 0 
 		margin-right: 16px
 		position: relative
-		height: 27px
-		line-height: 27px
+		font-size: 11px
 		+tr_c
 		+r(1024)
-			height: 40px
-			line-height: 40px
+			padding: 12px 0 
 		&:before
 			content: "\f105"
 			position: absolute
@@ -82,7 +87,7 @@
 			+fa
 			font-size: 12px
 			+r(1024)
-				top: 13px
+				top: 14px
 	a
 		color: #333 
 		&:hover
@@ -807,9 +812,13 @@
 	height: 54vh
 	font-size: 13px
 	+font
-	color: $text 
+	color: $text
 	+r(1024)
-		height: 40vh
+		height: 350px
+	+r(767)
+		height: 200px
+	+rhmin(1024)
+		height: 350px
 	&__window
 		strong
 			display: block
