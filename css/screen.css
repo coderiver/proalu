@@ -333,8 +333,7 @@ a { text-decoration: none; }
 .banner__img { position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.7; }
 .banner__img picture { position: absolute; bottom: 0; left: 0; width: 100%; }
 @media only screen and (max-width: 1366px) { .banner__img picture { position: static; } }
-.banner__img img { display: block; width: 100%; height: auto; }
-@media only screen and (max-width: 1366px) { .banner__img img { width: auto; height: 100%; } }
+.banner__img img { display: block; min-width: 100%; min-height: 100%; height: auto; width: auto; }
 .banner .l-center { position: relative; z-index: 2; height: 100%; padding-top: 11%; }
 .banner__title { margin: 0 0 20px; font-size: 24px; text-shadow: 3px 3px 3px rgba(28, 16, 8, 0.5); }
 @media only screen and (max-width: 1024px) { .banner__title { font-size: 20px; } }
