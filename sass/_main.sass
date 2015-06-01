@@ -32,13 +32,23 @@
 				position: static
 		img
 			display: block
-			min-width: 100%
-			min-height: 100%
+			width: 100%
 			height: auto
-			width: auto
-			// +r(1366)
-			// 	width: auto
-			// 	height: 100%
+			+r(1366)
+				display: block
+				+transform(translate3d(-50%,-50%,0))
+				position: absolute
+				left: 50%
+				top: 24%
+				min-width: 100%
+				min-height: 100%
+				width: auto
+				height: auto
+			+r(1280)
+				position: static
+				height: 100%
+				width: auto
+				+transform(translate3d(0,0,0))
 	.l-center
 		position: relative
 		z-index: 2
