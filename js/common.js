@@ -99,6 +99,7 @@ head.ready(function() {
 	   });
 
 	   $(".js-select-list li").on("click",function() {
+	   	   if($(this).hasClass('select__opt-title')){return false}
 	       var val = $(this).attr("data-val");
 	       var text = $(this).text();
 	       var select = $(this).parents(".js-select");
