@@ -27,6 +27,7 @@ head.ready(function() {
 		el.css({
 			height: winHeight-headerHeight
 		});
+		console.log(headerHeight);
 	}
 	fullHeight();
 	$(window).resize(function(){

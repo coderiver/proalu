@@ -16,6 +16,32 @@
 		height: calc(100vh - 73px)
 		+r(1024)
 			height: calc(100vh - 60px)
+		> .l-center
+			+r(1024)
+				height: auto !important
+
+	.fotorama
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		&__nav-wrap
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 30px
+		&__nav__frame
+			line-height: 30px
+		&__dot
+			border-color: #fff
+			display: inline-block
+			top: 0
+			vertical-align: middle
+		img
+			+r(768)
+				height: 100%
+				width: auto
 	&__img
 		position: absolute
 		top: 0
@@ -81,6 +107,47 @@
 			border-radius: 44px 
 		.icon-currency
 			margin-right: 8px
+.fotorama-nav
+	position: absolute
+	top: 26%
+	left: 0
+	right: 0
+	+r(1024)
+		top: 50%
+		left: 15px
+		right: 15px
+		margin-top: -33px
+	.l-center
+		padding: 0
+	+r(767)
+		display: none
+.fotorama-prev, 
+.fotorama-next, 
+	display: block
+	width: 66px
+	height: 66px
+	text-align: center
+	line-height: 66px
+	background: rgba(#000, .3)
+	+transition(background, opacity, .2s)
+	+transform(translate3d(0, 0, 0))
+	opacity: 1
+	&:hover
+		background: rgba(#000, .9)
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+.fotorama-prev
+	float: left
+	margin-left: -5px
+	&:before
+		+svg(caret-l-big,23,43)
+.fotorama-next
+	float: right
+	margin-right: -5px
+	&:before
+		+svg(caret-r-big,23,43)
 .menu-wrap
 	position: absolute
 	z-index: 2
