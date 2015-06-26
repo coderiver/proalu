@@ -3,6 +3,7 @@
 	color: #fff
 	text-align: center
 	margin-bottom: -45px
+	overflow: hidden
 	+r(768)
 		margin-bottom: 40px
 	+ div
@@ -13,9 +14,16 @@
 		overflow: hidden
 		min-height: 360px
 		background: #000 
-		height: calc(100vh - 73px)
-		+r(1024)
-			height: calc(100vh - 60px)
+		height: 600px
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 220px
+			+g(transparent, rgba(#000,.2)) 
+			z-index: 2
 		> .l-center
 			+r(1024)
 				height: auto !important
@@ -26,6 +34,7 @@
 		right: 0
 		bottom: 0
 		left: 0
+		z-index: 1
 		&__nav-wrap
 			position: absolute
 			left: 0
@@ -39,6 +48,7 @@
 			top: 0
 			vertical-align: middle
 		img
+			opacity: 0.7
 			+r(768)
 				height: 100%
 				width: auto
@@ -79,16 +89,25 @@
 		position: relative
 		z-index: 2
 		height: 100%
-		padding-top: 11%
+		padding-top: 125px
+		+r(1024)
+			padding-top: 11%
 	&__title
-		margin: 0 0 20px
+		margin: 0 auto 20px
+		max-width: 60%
 		font-size: 24px
 		text-shadow: 3px 3px 3px rgba(28, 16, 8, .5)
 		+r(1024)
 			font-size: 20px
+			max-width: 80%
+		+r(768)
+			max-width: 100%
 		strong
 			display: block
+			
 			font-size: 36px
+			line-height: 1.25
+			text-transform: uppercase
 			+r(1024)
 				font-size: 30px
 	&__link
@@ -107,16 +126,23 @@
 			border-radius: 44px 
 		.icon-currency
 			margin-right: 8px
+.mobile
+	.banner__main
+		height: calc(100vh - 73px)
+		+r(1024)
+			height: calc(100vh - 60px)
+	.fotorama-nav
+		+r(1024)
+			top: 50%
+			margin-top: -33px
 .fotorama-nav
 	position: absolute
-	top: 26%
+	top: 180px
 	left: 0
 	right: 0
 	+r(1024)
-		top: 50%
 		left: 15px
 		right: 15px
-		margin-top: -33px
 	.l-center
 		padding: 0
 	+r(767)
