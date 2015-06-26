@@ -212,4 +212,35 @@ head.ready(function() {
 		fotorama.show('>');
 		return false;
 	});
+
+	if ($("html").hasClass("desktop")) {
+		var fotoramaAutoplay = 5000;
+	}
+	else {
+		var fotoramaAutoplay = 0;
+	}
+	$('.js-fotorama-slider').fotorama({
+		minWidth: '100%',
+		minHeight: '100%',
+		loop: true,
+		autoplay: fotoramaAutoplay,
+		autoplay: fotoramaAutoplay
+	});
+
+	// 1. Initialize fotorama manually.
+	var $fotoramaSliderDiv = $('.js-fotorama-slider').fotorama();
+
+	// 2. Get the API object.
+	var fotoramaSlider = $fotoramaSliderDiv.data('fotorama');
+
+	$(".js-fotorama-slider-prev").on("click", function() {
+		fotoramaSlider.show('<');
+		return false;
+	});
+	$(".js-fotorama-slider-next").on("click", function() {
+		fotoramaSlider.show('>');
+		return false;
+	});
+
+	
 });
