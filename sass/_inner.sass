@@ -426,6 +426,7 @@
 	display: inline-block
 	vertical-align: top
 	width: 20%
+	border: 1px solid $border
 	margin: 0 -1px 10px 0
 	+r(1024)
 		width: 33.333%
@@ -435,7 +436,7 @@
 		height: 66px
 	&__main
 		position: relative
-		border: 1px solid $border
+		border-top: 1px solid $border
 		padding: 6px 15px
 		min-height: 49px
 		font-size: 13px
@@ -445,7 +446,15 @@
 			position: absolute
 			top: -8px
 			left: 15px
+			z-index: 2
 			+arr(20,8,#fff,t) 
+		&:after
+			content: ""
+			position: absolute
+			top: -9px
+			left: 14px
+			z-index: 1
+			+arr(22,9,$border,t) 
 		span
 			display: block
 			+text-overflow
