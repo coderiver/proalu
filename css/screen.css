@@ -335,7 +335,7 @@ a { text-decoration: none; }
 @media only screen and (max-width: 1024px) { .banner__main > .l-center { height: auto !important; } }
 .banner .fotorama { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; }
 .banner .fotorama__nav-wrap { position: absolute; left: 0; right: 0; bottom: 30px; }
-@media only screen and (max-width: 768px) { .banner .fotorama__nav-wrap { bottom: auto; top: 50vh; } }
+@media only screen and (max-width: 768px) { .banner .fotorama__nav-wrap { bottom: auto; top: calc(50vh - 20px); } }
 .banner .fotorama__nav__frame { line-height: 30px; }
 .banner .fotorama__dot { border-color: #fff; display: inline-block; top: 0; vertical-align: middle; }
 .banner .fotorama img { opacity: 0.7; }
