@@ -24,6 +24,7 @@
 			height: 220px
 			+g(transparent, rgba(#000,.2)) 
 			z-index: 2
+			pointer-events: none
 		> .l-center
 			+r(1024)
 				height: auto !important
@@ -40,6 +41,9 @@
 			left: 0
 			right: 0
 			bottom: 30px
+			+r(768)
+				bottom: auto 
+				top: 50vh 
 		&__nav__frame
 			line-height: 30px
 		&__dot
@@ -49,9 +53,9 @@
 			vertical-align: middle
 		img
 			opacity: 0.7
-			+r(768)
-				height: 100%
-				width: auto
+			// +r(768)
+			// 	height: 100%
+			// 	width: auto
 	&__img
 		position: absolute
 		top: 0
@@ -99,6 +103,7 @@
 		+r(1024)
 			font-size: 20px
 			margin: 0 0 20px
+
 		strong
 			display: block
 			
@@ -107,6 +112,8 @@
 			text-transform: uppercase
 			+r(1024)
 				font-size: 30px
+			+r(767)
+				font-size: 24px
 	&__link
 		display: inline-block
 		padding: 0 40px 0 35px 
@@ -124,10 +131,13 @@
 		.icon-currency
 			margin-right: 8px
 .mobile
+	.banner,
 	.banner__main
-		height: calc(100vh - 73px)
+		height: calc(90vh - 73px)
 		+r(1024)
-			height: calc(100vh - 60px)
+			height: calc(90vh - 60px)
+		+r(768)
+			height: calc(60vh - 60px)
 	.fotorama-nav
 		+r(1024)
 			top: 50%
