@@ -123,7 +123,26 @@ a { text-decoration: none; }
 .nav__feedback { background: #333; }
 .nav__feedback .nav__link { color: #fff; }
 
-.lang { position: relative; float: right; border-left: 1px solid #ddd; border-right: 1px solid #ddd; width: 68px; font-size: 13px; text-transform: uppercase; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; }
+.nav__search { position: relative; float: right; border-left: 1px solid #ddd; border-right: 1px solid #ddd; width: 44px; font-size: 13px; text-transform: uppercase; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; }
+.nav__search > a { color: #a5a5a5; display: block; height: 73px; line-height: 73px; text-align: center; }
+@media only screen and (max-width: 1024px) { .nav__search > a { height: 60px; line-height: 60px; } }
+@media only screen and (max-width: 1024px) { .nav__search { margin-right: 60px; } }
+.nav__search .fa-times { display: none; }
+.nav__search.is-active { background: #8c8d8d; }
+.nav__search.is-active > a { color: #fff; }
+.nav__search.is-active .fa-times { display: inline-block; }
+.nav__search.is-active .fa-search { display: none; }
+
+.nav-search-form { background: #8c8d8d; position: relative; z-index: 10; display: none; position: absolute; top: 73px; left: 0; right: 0; }
+@media only screen and (max-width: 1024px) { .nav-search-form { top: 60px; } }
+.nav-search-form .nav-search-form__in { max-width: 750px; margin: 0 auto; line-height: 0; padding: 14px 0; position: relative; }
+.nav-search-form .search-input { margin-left: 10px; padding-left: 47px; }
+@media only screen and (max-width: 1024px) { .nav-search-form .search-input { margin-left: 0; } }
+.nav-search-form .nav-search-form__btn { position: absolute; left: 28px; top: 22px; background: transparent; color: #ff4700; }
+
+.search-input { width: 100%; border-radius: 3px; padding: 8px; }
+
+.lang { position: relative; float: right; border-left: 1px solid #ddd; border-right: 1px solid #ddd; width: 68px; font-size: 13px; text-transform: uppercase; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; display: none; }
 @media only screen and (max-width: 1024px) { .lang { margin-right: 60px; } }
 .lang:hover, .lang.is-active { background: #8c8d8d; }
 .lang:hover .lang__active, .lang.is-active .lang__active { color: #fff; }

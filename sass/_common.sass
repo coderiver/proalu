@@ -311,6 +311,75 @@ a
 		background: #333
 		.nav__link
 			color: #fff 
+
+.nav__search
+	position: relative
+	float: right
+	border-left: 1px solid $border
+	border-right: 1px solid $border
+	width: 44px
+	font-size: 13px
+	text-transform: uppercase
+	+tr_bg
+	> a
+		color: #a5a5a5
+		display: block
+		height: 73px
+		line-height: 73px
+		text-align: center
+		+r(1024)
+			height: 60px
+			line-height: 60px  
+	+r(1024)
+		margin-right: 60px
+	.fa-times
+		display: none
+	&.is-active
+		background: #8c8d8d 
+		> a
+			color: #fff
+		.fa-times
+			display: inline-block
+		.fa-search
+			display: none
+			
+		
+.nav-search-form
+	background: #8c8d8d 
+	position: relative
+	z-index: 10
+	display: none
+	position: absolute
+	top: 73px
+	left: 0
+	right: 0
+	+r(1024)
+		top: 60px  
+	.nav-search-form__in
+		max-width: 750px 
+		margin: 0 auto
+		line-height: 0
+		padding: 14px 0
+		position: relative
+	.search-input
+		margin-left: 10px 
+		padding-left: 47px
+		+r(1024)
+			margin-left: 0
+		 
+	.nav-search-form__btn
+		position: absolute
+		left: 28px
+		top: 22px
+		background: transparent
+		color: #ff4700  
+	
+		
+.search-input
+	width: 100% 
+	border-radius: 3px
+	padding: 8px 
+
 .lang
 	position: relative
 	float: right
@@ -320,6 +389,7 @@ a
 	font-size: 13px
 	text-transform: uppercase
 	+tr_bg
+	display: none
 	+r(1024)
 		margin-right: 60px
 	&:hover,
@@ -1057,3 +1127,4 @@ a
 	.fa
 		+link
 		font-size: 14px 
+		
