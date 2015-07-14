@@ -355,13 +355,13 @@ a
 	top: 73px
 	left: 0
 	right: 0
+	padding: 14px 0
 	+r(1024)
 		top: 60px  
 	.nav-search-form__in
 		max-width: 750px 
 		margin: 0 auto
 		line-height: 0
-		padding: 14px 0
 		position: relative
 	.search-input
 		margin-left: 10px 
@@ -371,10 +371,15 @@ a
 		 
 	.nav-search-form__btn
 		position: absolute
-		left: 28px
-		top: 22px
+		left: 10px
+		top: 0
+		width: 40px
+		bottom: 0
+		width: 40px
 		background: transparent
 		color: #ff4700  
+		+r(1024)
+			left: 0 
 	
 		
 .search-input
@@ -1135,8 +1140,8 @@ a
 .search-form
 	position: relative
 	margin-bottom: 33px 
-	.search-input
-		border: 1px solid #dddddd
+	.input
+		border-radius: 3px
 		padding-left: 20px
 		padding-right: 80px  
 	.search-form__btn
@@ -1154,8 +1159,12 @@ a
 		margin-bottom: 48px 
 		+clr
 	.search__title
-		font-size: 20px
-		color: #ff4700
+		a
+			font-size: 20px
+			color: #ff4700
+			+tr_c
+			&:hover
+				color: #c83b04
 	.search__text
 		padding-right: 15px 
 		font-size: 14px
@@ -1165,6 +1174,9 @@ a
 		a
 			display: inline
 			color: #ff4700
+			+tr_c
+			&:hover
+				color: #c83b04
 		img
 			width: auto
 			max-width: 165px
