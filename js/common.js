@@ -52,6 +52,7 @@ head.ready(function() {
 		$(this).toggleClass("is-active");
 		$(".js-nav-search").fadeToggle(200);
 	});
+	
 
 // lang list
 	$(".js-lang > a").on("click", function(){

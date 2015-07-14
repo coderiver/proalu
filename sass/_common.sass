@@ -321,12 +321,14 @@ a
 	font-size: 13px
 	text-transform: uppercase
 	+tr_bg
-	> a
+	> button
 		color: #a5a5a5
 		display: block
 		height: 73px
 		line-height: 73px
 		text-align: center
+		background: transparent 
+		width: 100% 
 		+r(1024)
 			height: 60px
 			line-height: 60px  
@@ -336,7 +338,7 @@ a
 		display: none
 	&.is-active
 		background: #8c8d8d 
-		> a
+		> button
 			color: #fff
 		.fa-times
 			display: inline-block
@@ -349,7 +351,7 @@ a
 	position: relative
 	z-index: 10
 	display: none
-	position: absolute
+	position: fixed
 	top: 73px
 	left: 0
 	right: 0
@@ -379,6 +381,7 @@ a
 	width: 100% 
 	border-radius: 3px
 	padding: 8px 
+	color: #555555
 
 .lang
 	position: relative
@@ -1128,3 +1131,54 @@ a
 		+link
 		font-size: 14px 
 		
+	
+.search-form
+	position: relative
+	margin-bottom: 33px 
+	.search-input
+		border: 1px solid #dddddd
+		padding-left: 20px
+		padding-right: 80px  
+	.search-form__btn
+		position: absolute
+		right: 0
+		width: 67px
+		background: #ff4700 
+		top: 0
+		bottom: 0
+		color: #fff
+		border-radius: 0 3px 3px 0
+.search
+	max-width: 950px 
+	.search__item
+		margin-bottom: 48px 
+		+clr
+	.search__title
+		font-size: 20px
+		color: #ff4700
+	.search__text
+		padding-right: 15px 
+		font-size: 14px
+		margin-top: 20px 
+		p
+			color: #555555
+		a
+			display: inline
+			color: #ff4700
+		img
+			width: auto
+			max-width: 165px
+			float: left 
+			margin-right: 30px
+			margin-bottom: 10px 
+			+r(480)
+				max-width: 35% 
+				float: none
+		p + p
+			margin-top: 33px 
+	.search__meta
+		color: #999999
+		font-size: 14px
+		margin-top: 10px 
+
+		 
