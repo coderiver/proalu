@@ -203,6 +203,13 @@ head.ready(function() {
 		prevEffect: 'fade'
 	});
 
+	$(".js-fancybox-single").fancybox({
+		padding: 0,
+		nextEffect: 'fade',
+		prevEffect: 'fade',
+		arrows: false
+	});
+
 
 	// 1. Initialize fotorama manually.
 	var $fotoramaDiv = $('.js-fotorama').fotorama();
