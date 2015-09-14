@@ -376,7 +376,7 @@
 	background-position: -32px 0
 
 .fotorama__arr--disabled
-	pointer-events: none
+	//pointer-events: none
 	cursor: default
 	*display: none
 	opacity: .1
@@ -522,3 +522,8 @@
 
 .fotorama--fullscreen .fotorama__nav:after,.fotorama--fullscreen .fotorama__nav:before,.fotorama--fullscreen .fotorama__stage:after,.fotorama--fullscreen .fotorama__stage:before,.fotorama__wrap--fade .fotorama__stage:after,.fotorama__wrap--fade .fotorama__stage:before,.fotorama__wrap--no-shadows .fotorama__nav:after,.fotorama__wrap--no-shadows .fotorama__nav:before,.fotorama__wrap--no-shadows .fotorama__stage:after,.fotorama__wrap--no-shadows .fotorama__stage:before
 	display: none
+	
+.fotorama__stage__shaft
+	z-index: 1
+.fotorama__arr
+	z-index: 2
