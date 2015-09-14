@@ -601,6 +601,9 @@
 .gallery
 	margin: 0 0 33px 
 	position: relative
+	&.is-inactive
+		.gallery__nav
+			display: none
 	&__nav
 		position: absolute
 		top: 0
@@ -676,6 +679,7 @@
 			right: 15px
 			&:before
 				+svg(caret-r-big,23,43)
+		
 .slider
 	font-size: 0
 	.el

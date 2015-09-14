@@ -210,6 +210,13 @@ head.ready(function() {
 		arrows: false
 	});
 
+	if ($(".js-fotorama").length>0) {
+		$(".js-fotorama").each(function() {
+			if ($(this).children().length <= 1) {
+				$(this).parent().addClass("is-inactive");
+			}
+		});
+	}
 
 	// 1. Initialize fotorama manually.
 	var $fotoramaDiv = $('.js-fotorama').fotorama();
@@ -225,6 +232,9 @@ head.ready(function() {
 		fotorama.show('>');
 		return false;
 	});
+
+
+	
 
 	if ($("html").hasClass("desktop")) {
 		var fotoramaAutoplay = 5000;
