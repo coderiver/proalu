@@ -662,9 +662,10 @@ a { text-decoration: none; }
 .panel.is-active .panel__title { background: #eb4200; color: #fff; }
 .panel.is-active .panel__title:after { -ms-transform: rotate(-180deg); -webkit-transform: rotate(-180deg); transform: rotate(-180deg); color: #fff; }
 .panel__title { position: relative; padding: 6px 28px 6px 12px; font-size: 13px; font-weight: bold; text-transform: uppercase; background: #F3F3F3; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; cursor: pointer; -moz-transition: color 0.2s, background 0.2s; -o-transition: color 0.2s, background 0.2s; -webkit-transition: color 0.2s, background 0.2s; transition: color 0.2s, background 0.2s; }
-.panel__title:after { content: ""; position: absolute; right: 10px; top: 10px; font-family: FontAwesome; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0); font-size: 14px; color: #8c8d8d; -moz-transition: color 0.2s, -moz-transform 0.2s; -o-transition: color 0.2s, -o-transform 0.2s; -webkit-transition: color 0.2s, -webkit-transform 0.2s; transition: color 0.2s, transform 0.2s; }
+.panel__title button { position: absolute; right: 0; top: 0; bottom: 0; width: 28px; background: none; }
+.panel__title button:after { content: ""; position: absolute; right: 10px; top: 10px; font-family: FontAwesome; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0); font-size: 14px; color: #8c8d8d; -moz-transition: color 0.2s, -moz-transform 0.2s; -o-transition: color 0.2s, -o-transform 0.2s; -webkit-transition: color 0.2s, -webkit-transform 0.2s; transition: color 0.2s, transform 0.2s; }
+.panel__title button:hover:after { color: #fff; }
 .panel__title:hover { background: #eb4200; color: #fff; }
-.panel__title:hover:after { color: #fff; }
 .panel__body { padding: 10px 0; display: none; }
 .panel__nav { text-transform: uppercase; }
 .panel__nav li.is-active a { color: #eb4200; }

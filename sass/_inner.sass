@@ -486,20 +486,29 @@
 		+nosel
 		cursor: pointer
 		+tr_bgc
-		&:after
-			content: "\f107"
+		button
 			position: absolute
-			right: 10px
-			top: 10px
-			+fa
-			font-size: 14px
-			color: $bg 
-			+transition(color .2s, transform .2s)
+			right: 0
+			top: 0
+			bottom: 0
+			width: 28px
+			background: none 
+			&:after
+				content: "\f107"
+				position: absolute
+				right: 10px
+				top: 10px
+				+fa
+				font-size: 14px
+				color: $bg 
+				+transition(color .2s, transform .2s)
+			&:hover
+				&:after
+					color: #fff  
 		&:hover
 			background: $link
 			color: #fff 
-			&:after
-				color: #fff  
+			
 	&__body
 		padding: 10px 0
 		display: none
