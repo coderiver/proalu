@@ -115,6 +115,8 @@ a
 	+r(1024)
 		padding: 60px 0 40px
 		margin-bottom: 0
+	@media print
+		padding: 0
 	&_index
 		background: $light
 	&_404
@@ -174,11 +176,20 @@ a
 			padding-left: 0
 			float: none
 			width: 100%
+		@media print
+			padding-left: 0
+			float: none
+			width: 100%
+			margin-top: 30px
 	.l-col-liquid
 		margin: 0 228px 0 0
 		padding: 0 35px 0 0
 		border-right: 1px solid $border
 		+r(768)
+			margin: 0
+			padding: 0
+			border: 0
+		@media print
 			margin: 0
 			padding: 0
 			border: 0
@@ -253,18 +264,25 @@ a
 	margin-left: 8%
 	+clr
 	+r(1200)
-		margin-left: 4%
+		margin-left: 3%
 	+r(1024)
 		display: none
+	@media print
+		margin-left: 0
 	&__item
 		float: left
-		margin-left: 38px
+		margin-left: 28px
 		+tr_bg
+		+r(1165)
+			margin-left: 14px
 		+r(1024)
 			float: none
-			margin-left: 0
+			margin-left: 5px
+
+
 		@media print
-			margin-left: 0
+			margin-left: 3px
+			font-size: 12px
 		&:first-child
 			margin-left: 0
 		&:hover
@@ -325,6 +343,10 @@ a
 	font-size: 13px
 	text-transform: uppercase
 	+tr_bg
+	@media print
+		border-left: 0
+		border-right: 0
+		width: 10px
 	> button
 		color: #a5a5a5
 		display: block
@@ -347,8 +369,7 @@ a
 		.fa-times
 			display: inline-block
 		.fa-search
-			display: none
-
+			display: noneтфм
 
 .nav-search-form
 	background: #8c8d8d
@@ -362,6 +383,9 @@ a
 	padding: 14px 0
 	+r(1024)
 		top: 60px
+	@media print
+		padding: 0
+		top: 0
 	.nav-search-form__in
 		max-width: 750px
 		margin: 0 auto

@@ -16,7 +16,7 @@
 		left: 50%
 		top: 50%
 		width: 101%
-		min-height: 1px 
+		min-height: 1px
 		+transform(translateX(-50%) translateY(-50%))
 		+r(640)
 			width: auto
@@ -43,7 +43,7 @@
 		left: 10px
 		right: 10px
 		font-size: 36px
-		color: #fff 
+		color: #fff
 		+r(1024)
 			font-size: 30px
 		+r(768)
@@ -56,24 +56,24 @@
 			margin-top: -20px
 .breadcrumbs
 	margin: 0 0 45px
-	padding: 0 10px 0 0 
-	color: #8c8d8d 
+	padding: 0 10px 0 0
+	color: #8c8d8d
 	font-size: 0
 	+clr
 	+text-overflow
 	+r(768)
 		margin-bottom: 20px
-	
+
 	a, span
 		display: inline-block
 		vertical-align: middle
-		padding: 6px 0 
+		padding: 6px 0
 		margin-right: 16px
 		position: relative
 		font-size: 11px
 		+tr_c
 		+r(1024)
-			padding: 12px 0 
+			padding: 12px 0
 		&:before
 			content: "\f105"
 			position: absolute
@@ -84,9 +84,9 @@
 			+r(1024)
 				top: 14px
 	a
-		color: #333 
+		color: #333
 		&:hover
-			color: $link 
+			color: $link
 		&:first-child
 			&:before
 				display: none
@@ -114,7 +114,7 @@
 			padding: 10px 30px 10px 15px
 			font-size: 16px
 		&:hover
-			background: #f9f9f9 
+			background: #f9f9f9
 			color: $bg_l
 			&:after
 				color: $bg_l
@@ -126,9 +126,9 @@
 			right: 17px
 			top: 50%
 			margin-top: -9px
-			+fa 
+			+fa
 			font-size: 18px
-			color: $link 
+			color: $link
 			+tr_c
 			+tr(transform .2s)
 		&.is-active
@@ -138,10 +138,10 @@
 			display: block
 			margin-bottom: 2px
 			color: #8c8d8d
-			font-size: 14px 
+			font-size: 14px
 	&__body
 		display: none
-		padding: 15px  
+		padding: 15px
 		.file-icon
 			margin-left: 5px
 		.text
@@ -163,7 +163,7 @@
 		color: $text
 		+tr_c
 		&:hover
-			color: $link 
+			color: $link
 	.file-icon
 		position: absolute
 		left: 0
@@ -174,7 +174,7 @@
 			+link
 			&:hover
 				color: $text
-	
+
 .file-icon
 	display: inline-block
 	position: relative
@@ -187,7 +187,7 @@
 			background: #4498ce
 	&_dwg
 		i
-			background: #8c8d8d 
+			background: #8c8d8d
 	i
 		position: absolute
 		left: -5px
@@ -198,10 +198,10 @@
 		text-align: center
 		font-size: 8px
 		color: #fff
-		text-transform: uppercase 
-		border-radius: 2px 
+		text-transform: uppercase
+		border-radius: 2px
 		font-style: normal
-		
+
 .text
 	position: relative
 	line-height: 1.8
@@ -212,23 +212,23 @@
 		a
 			+link
 			&:visited
-				color: $link_h 
+				color: $link_h
 .title
 	position: relative
 	margin: 35px 0 45px
 	font-size: 24px
 	font-weight: normal
-	color: $link_d 
+	color: $link_d
 	+r(768)
 		font-size: 18px
 	&:after
-		content: "" 
+		content: ""
 		position: absolute
 		bottom: -18px
 		left: 0
 		width: 65px
 		height: 2px
-		background: $link 
+		background: $link
 	&_big
 		font-size: 30px
 		+r(768)
@@ -236,7 +236,7 @@
 	&_lg
 		font-size: 36px
 		+r(768)
-			font-size: 26px 
+			font-size: 26px
 .list-links
 	line-height: 1.8
 	li
@@ -248,16 +248,16 @@
 			position: absolute
 			top: 7px
 			left: 0
-			+svg(arr-r,15,9) 
+			+svg(arr-r,15,9)
 	a
 		+link
-			
+
 .error-page
 	position: relative
 	overflow: hidden
 	height: 100vh
 	.l-center
-		position: relative 
+		position: relative
 		z-index: 2
 		padding-top: 75px
 		height: 100%
@@ -298,6 +298,7 @@
 			width: 100%
 		+r(768)
 			text-align: right
+
 	&__title
 		margin-bottom: 53px
 		font-size: 18px
@@ -306,6 +307,7 @@
 		+r(768)
 			font-size: 14px
 			margin-bottom: 20px
+
 		strong
 			display: block
 			margin-bottom: 24px
@@ -314,6 +316,8 @@
 			font-size: 72px
 			+r(768)
 				font-size: 30px
+			@media print
+				color: #000
 			&:after
 				content: ""
 				position: absolute
@@ -321,7 +325,7 @@
 				left: 0
 				width: 54px
 				height: 3px
-				background: $link  
+				background: $link
 				+r(768)
 					left: auto
 					right: 0
@@ -329,9 +333,14 @@
 			font-size: 48px
 			+r(768)
 				font-size: 20px
+			@media print
+				color: #000
 		em
 			font-style: normal
-			color: $link 
+			color: $link
+		p
+			@media print
+				color: #000
 	.menu
 		table-layout: fixed
 		li
@@ -342,7 +351,7 @@
 .post
 	font-size: 15px
 	line-height: 1.6
-	color: $text 
+	color: $text
 	+r(768)
 		font-size: 14px
 	dl
@@ -354,18 +363,21 @@
 			width: 167px
 			font-size: 14px
 			font-weight: bold
-			color: $link_d 
+			color: $link_d
 			text-transform: uppercase
 			+r(1024)
 				float: none
 				width: 100%
 				margin-bottom: 10px
+			@media print
+				float: none
+				width: 100%
 		dd
 			overflow: hidden
 			margin-bottom: 23px
 	img
 		float: right
-		margin-left: 5%	
+		margin-left: 5%
 		+r(1024)
 			max-width: 40%
 		+r(768)
@@ -374,18 +386,24 @@
 			display: block
 			width: 100%
 			max-width: 100%
-	
+		@media print
+			float: none
+			margin: 0 0 20px
+			display: block
+			width: 100%
+			max-width: 100%
+
 	p
 		margin-bottom: 24px
 		a
 			+link
 			&:visited
-				color: $link_h 
+				color: $link_h
 
 .tabs
 	+clr
 	margin: 45px 0 15px
-	padding-right: 1px 
+	padding-right: 1px
 	overflow: hidden
 	li
 		float: left
@@ -395,22 +413,22 @@
 			width: 33.333%
 		+r(768)
 			width: 100%
-			
+
 		&.is-active,
 		&:hover
 			a
 				background: $bg
 				border-color: $bg
-				color: #fff 
+				color: #fff
 	a
 		display: block
-		padding: 0 10px 
+		padding: 0 10px
 		margin-right: -1px
 		height: 45px
 		line-height: 45px
 		+vertical
 		border: 1px solid $border
-		color: $bg 
+		color: $bg
 
 		+rmin(1024)
 			+tr_bgc
@@ -421,7 +439,7 @@
 			font-size: 13px
 .colors-wrap
 	font-size: 0
-	margin-right: -4px	
+	margin-right: -4px
 	+r(768)
 		border: 0
 		margin-right: 0
@@ -436,6 +454,8 @@
 		width: 33.333%
 	+r(768)
 		width: 50%
+	@media print
+		width: 50%
 	&__top
 		height: 66px
 	&__main
@@ -444,21 +464,21 @@
 		padding: 6px 15px
 		min-height: 49px
 		font-size: 13px
-		color: #8c8d8d 
+		color: #8c8d8d
 		&:before
 			content: ""
 			position: absolute
 			top: -8px
 			left: 15px
 			z-index: 2
-			+arr(20,8,#fff,t) 
+			+arr(20,8,#fff,t)
 		&:after
 			content: ""
 			position: absolute
 			top: -9px
 			left: 14px
 			z-index: 1
-			+arr(22,9,$border,t) 
+			+arr(22,9,$border,t)
 		span
 			display: block
 			+text-overflow
@@ -472,13 +492,13 @@
 	&.is-active
 		.panel__title
 			background: $link
-			color: #fff  
+			color: #fff
 			&:after
 				+rotate(-180)
-				color: #fff 
+				color: #fff
 	&__title
 		position: relative
-		padding: 6px 28px 6px 12px 
+		padding: 6px 28px 6px 12px
 		font-size: 13px
 		font-weight: bold
 		text-transform: uppercase
@@ -492,7 +512,7 @@
 			top: 0
 			bottom: 0
 			width: 28px
-			background: none 
+			background: none
 			&:after
 				content: "\f107"
 				position: absolute
@@ -500,15 +520,15 @@
 				top: 10px
 				+fa
 				font-size: 14px
-				color: $bg 
+				color: $bg
 				+transition(color .2s, transform .2s)
 			&:hover
 				&:after
-					color: #fff  
+					color: #fff
 		&:hover
 			background: $link
-			color: #fff 
-			
+			color: #fff
+
 	&__body
 		padding: 10px 0
 		display: none
@@ -517,7 +537,7 @@
 		li
 			&.is-active
 				a
-					color: $link 
+					color: $link
 		a
 			display: inline-block
 			padding: 5px 12px
@@ -525,15 +545,15 @@
 			color: $text
 			+tr_c
 			&:hover
-				color: $link 
+				color: $link
 	&__section
 		margin: 15px 0 3px 12px
-		border-bottom: 1px solid $border 
+		border-bottom: 1px solid $border
 		padding-bottom: 9px
-		color: $bg 
-		
+		color: $bg
+
 .pager
-	margin: 30px 0 
+	margin: 30px 0
 	text-align: center
 	font-size: 0
 	a
@@ -548,9 +568,9 @@
 		line-height: 30px
 		text-align: center
 		background: #fff
-		color: #FF4700 
+		color: #FF4700
 		font-size: 14px
-		color: $bg 
+		color: $bg
 		+tr_bgc
 		&:hover,
 		&.is-active
@@ -559,14 +579,14 @@
 		&.pager__prev
 			z-index: 1
 			background: $link
-			color: #fff 
-			border-color: $link 
+			color: #fff
+			border-color: $link
 			&:hover
-				background: #fff 
-				border-color: $border 
+				background: #fff
+				border-color: $border
 			&:before,
 			&:after
-				content: "" 
+				content: ""
 				position: absolute
 				left: 50%
 				top: 50%
@@ -592,10 +612,10 @@
 
 .article
 	margin-bottom: 52px
-	border-bottom: 1px solid $border 
+	border-bottom: 1px solid $border
 	padding-bottom: 16px
 	font-size: 15px
-	color: $text 
+	color: $text
 	line-height: 1.6
 	&:last-child
 		border: 0
@@ -604,11 +624,11 @@
 		a
 			+link
 			&:visited
-				color: $link_h 
+				color: $link_h
 	+ .images
 		margin-top: -57px
 .gallery
-	margin: 0 0 33px 
+	margin: 0 0 33px
 	position: relative
 	&.is-inactive
 		.gallery__nav
@@ -621,7 +641,7 @@
 		height: 110px
 		width: 15px
 		text-align: center
-		background: #fff 
+		background: #fff
 		&:last-child
 			left: auto
 			right: 0
@@ -658,13 +678,13 @@
 				+svg(caret-r-orange,9,17)
 	.fotorama
 		&__stage
-			background: #f3f3f3 
+			background: #f3f3f3
 		&__nav-wrap
 			margin: 0 15px 14px
 		&__thumb-border
-			border-color: rgba(#000,.6) 
-			background: rgba(#000,.6) 
-		&__arr 
+			border-color: rgba(#000,.6)
+			background: rgba(#000,.6)
+		&__arr
 			position: absolute
 			top: 50%
 			margin-top: -33px
@@ -688,7 +708,7 @@
 			right: 15px
 			&:before
 				+svg(caret-r-big,23,43)
-		
+
 .slider
 	font-size: 0
 	.el
@@ -705,7 +725,7 @@
 	&_simple
 		margin: 0 -1px -1px 0
 		border: 1px solid $border
-		width: 33.3% 
+		width: 33.3%
 		width: calc(100% / 3)
 		+r(1024)
 			width: 50%
@@ -716,12 +736,12 @@
 				display: none
 		.el__body
 			padding-left: 15px
-	&__img	
+	&__img
 		display: block
 		position: relative
 		height: 175px
 		background: #f3f3f3
-		overflow: hidden 
+		overflow: hidden
 		&:hover
 			&:after
 				opacity: 0.5
@@ -733,10 +753,10 @@
 			bottom: 0
 			left: 0
 			background: #000
-			opacity: 0 
+			opacity: 0
 			+tr_o
 		img
-			margin: 0 auto 
+			margin: 0 auto
 			min-width: 100%
 			min-height: 100%
 	&__body
@@ -759,23 +779,23 @@
 		font-size: 13px
 		font-weight: bold
 		text-transform: uppercase
-		color: $text 
+		color: $text
 		+tr_c
 		&:hover
-			color: $link 
+			color: $link
 		&:after
 			content: ""
 			position: absolute
 			left: 0
-			bottom: 0 
+			bottom: 0
 			width: 38px
 			height: 2px
-			background: #a9aaaa 
-			
+			background: #a9aaaa
+
 .list-icon
 	font-size: 0
 	&_border
-		border-bottom: 1px solid $border 
+		border-bottom: 1px solid $border
 		padding-bottom: 27px
 	li
 		position: relative
@@ -797,7 +817,7 @@
 		position: absolute
 		top: 0
 		left: 0
-		
+
 .images
 	font-size: 0
 	a
@@ -826,7 +846,7 @@
 		display: block
 		min-width: 100%
 		min-height: 100%
-		
+
 
 .map
 	height: 415px
@@ -846,53 +866,61 @@
 			line-height: 1
 			font-size: 18px
 			font-weight: normal
-			color: #333 
+			color: #333
 		span
 			display: block
 			margin-bottom: 5px
-			color: $bg 
+			color: $bg
 	.gm-style-iw
-		padding: 10px 
+		padding: 10px
 		+ div
 			display: none !important
 .section
 	padding-bottom: 45px
-	background: #f3f3f3 
+	background: #f3f3f3
 	+r(1024)
 		padding: 15px 0
 .table-wrap
-	margin: 0 -15px 
+	margin: 0 -15px
 	+r(1024)
-		margin: 0		
+		margin: 0
+	@media print
+		margin: 0
 .table
 	display: table
 	margin-bottom: -15px
 	width: 100%
 	table-layout: fixed
-	border-spacing: 15px 
+	border-spacing: 15px
 	+r(1024)
+		display: block
+		margin: 0 0 15px 0
+	@media print
 		display: block
 		margin: 0 0 15px
 	&__cell
 		display: table-cell
 		vertical-align: top
-		background: #fff 
+		background: #fff
 		+r(1024)
 			display: block
 			margin: 0 0 15px
+		@media print
+			display: block
+			margin: 0 0 15px 0
 	&_form
 		margin-bottom: 0
 .card
 	padding: 23px 15px
-	background: #fff  
+	background: #fff
 	overflow: hidden
 	font-size: 13px
 	color: #333
 	span
-		color: $bg 
+		color: $bg
 	&__head
 		float: left
-		margin-right: -1px 
+		margin-right: -1px
 		padding-right: 22px
 		width: 150px
 		border-right: 1px solid $border
@@ -900,10 +928,10 @@
 			float: none
 			width: 100%
 			margin: 0 0 10px
-			padding: 0 0 10px  
+			padding: 0 0 10px
 			border-right: 0
 			border-bottom: 1px solid $border
-		strong, 
+		strong,
 		span
 			display: block
 			line-height: 1
@@ -917,7 +945,7 @@
 			margin-bottom: 8px
 	&__body
 		overflow: hidden
-		border-left: 1px solid $border 
+		border-left: 1px solid $border
 		padding-left: 30px
 		+r(768)
 			border: 0
@@ -931,13 +959,13 @@
 			color: #333
 			+tr_c
 			&:hover
-				color: $link 
-		
+				color: $link
+
 		em
 			font-style: normal
 			display: inline-block
 			width: 27px
-			
+
 	&__inline
 		li
 			position: relative
@@ -956,11 +984,11 @@
 				&:before
 					display: none
 			&:before
-				content: "|" 
+				content: "|"
 				position: absolute
 				left: 0
 				top: 0
-				color: $border 
+				color: $border
 				+r(1024)
 					display: none
 
@@ -972,10 +1000,10 @@
 	+tr_c
 	&:hover,
 	&.is-active
-		color: $link 
+		color: $link
 	.fa
 		position: absolute
 		top: 3px
 		left: 0
 		font-size: 14px
-		color: $link 
+		color: $link
