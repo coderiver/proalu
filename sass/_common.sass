@@ -862,6 +862,8 @@ a
 	+tr_bg
 	+r(1024)
 		display: none
+	@media print
+		display: none
 	&:hover
 		background: #000
 	&:active
@@ -1098,7 +1100,7 @@ a
 			margin-top: 20px
 			float: none
 		&:before
-			content: "’’"
+			content: open-quote
 			position: absolute
 			left: 0
 			top: -3px
