@@ -1,6 +1,16 @@
+//@media print and (color)
+//	*
+//		-webkit-print-color-adjust: exact
+//		print-color-adjust: exact
+
+
+
 .page-head
 	position: relative
 	overflow: hidden
+	@media print
+		-webkit-print-color-adjust: exact
+		print-color-adjust: exact
 	&:after
 		content: ""
 		position: absolute
@@ -37,6 +47,7 @@
 		z-index: 3
 		+r(768)
 			height: 180px
+
 	&__title
 		position: absolute
 		bottom: 19px
@@ -47,6 +58,8 @@
 		+r(1024)
 			font-size: 30px
 		+r(768)
+			font-size: 24px
+		@media print
 			font-size: 24px
 .breadcrumbs-wrap
 	background: #f3f3f3
@@ -288,6 +301,9 @@
 		right: 0
 		bottom: 0
 		+g(rgba(#000,0),rgba(#000,.5))
+		@media print
+			background-color: #FFF
+
 	&__in
 		display: inline-block
 		vertical-align: middle
@@ -307,7 +323,10 @@
 		+r(768)
 			font-size: 14px
 			margin-bottom: 20px
-
+		@media print
+			color: #000
+			-webkit-print-color-adjust: exact
+			print-color-adjust: exact
 		strong
 			display: block
 			margin-bottom: 24px
@@ -316,8 +335,6 @@
 			font-size: 72px
 			+r(768)
 				font-size: 30px
-			@media print
-				color: #000
 			&:after
 				content: ""
 				position: absolute
@@ -333,14 +350,9 @@
 			font-size: 48px
 			+r(768)
 				font-size: 20px
-			@media print
-				color: #000
 		em
 			font-style: normal
 			color: $link
-		p
-			@media print
-				color: #000
 	.menu
 		table-layout: fixed
 		li
@@ -405,6 +417,9 @@
 	margin: 45px 0 15px
 	padding-right: 1px
 	overflow: hidden
+	@media print
+		-webkit-print-color-adjust: exact
+		print-color-adjust: exact
 	li
 		float: left
 		width: 20%
@@ -413,13 +428,14 @@
 			width: 33.333%
 		+r(768)
 			width: 100%
-
 		&.is-active,
 		&:hover
 			a
 				background: $bg
 				border-color: $bg
 				color: #fff
+				@media print
+					color: #000
 	a
 		display: block
 		padding: 0 10px
@@ -429,14 +445,17 @@
 		+vertical
 		border: 1px solid $border
 		color: $bg
-
 		+rmin(1024)
 			+tr_bgc
+		@media print
+			color: #eaeaea
 		span
 			display: inline-block
 			vertical-align: middle
 			line-height: 1.1
 			font-size: 13px
+
+
 .colors-wrap
 	font-size: 0
 	margin-right: -4px
@@ -450,14 +469,18 @@
 	width: 20%
 	border: 1px solid $border
 	margin: 0 -1px 10px 0
+
 	+r(1024)
 		width: 33.333%
 	+r(768)
 		width: 50%
 	@media print
-		width: 50%
+		width: 24%
+		-webkit-print-color-adjust: exact
+		print-color-adjust: exact
 	&__top
 		height: 66px
+		background-color: red
 	&__main
 		position: relative
 		border-top: 1px solid $border
@@ -633,6 +656,8 @@
 	&.is-inactive
 		.gallery__nav
 			display: none
+	@media print
+		margin-left: -250px
 	&__nav
 		position: absolute
 		top: 0
@@ -717,6 +742,7 @@
 			border-right: #000
 .el-wrap
 	font-size: 0
+
 .el
 	display: inline-block
 	vertical-align: top
@@ -731,6 +757,8 @@
 			width: 50%
 		+r(480)
 			width: 100%
+		@media print
+			width: 50%
 		.el__title
 			&:after
 				display: none
@@ -755,6 +783,7 @@
 			background: #000
 			opacity: 0
 			+tr_o
+
 		img
 			margin: 0 auto
 			min-width: 100%
@@ -809,6 +838,9 @@
 		+r(1024)
 			width: 100%
 			padding-right: 0
+		@media print
+			width: 100%
+
 		strong
 			text-transform: uppercase
 		p

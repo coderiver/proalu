@@ -28,7 +28,7 @@
 
 .slick-slider .slick-list,
 .slick-track,
-.slick-slide, 
+.slick-slide,
 .slick-slide img
 	-webkit-transform: translate3d(0, 0, 0)
 	-moz-transform: translate3d(0, 0, 0)
@@ -72,6 +72,7 @@
 		height: auto
 		border: 1px solid transparent
 
+
 .slick-prev,
 .slick-next
 	position: absolute
@@ -86,7 +87,7 @@
 	+hide-text
 	&:hover
 		background: $link
-		border-color: $link 
+		border-color: $link
 		&:after
 			opacity: 1
 		&:before
@@ -97,7 +98,7 @@
 		position: absolute
 		top: 50%
 		left: 50%
-		margin: -8px 0 0 -5px 
+		margin: -8px 0 0 -5px
 		+tr_o
 	&:after
 		opacity: 0
@@ -123,14 +124,14 @@
 	li
 		position: relative
 		display: inline-block
-		padding: 0 3px 
+		padding: 0 3px
 		&.slick-active
 			button
 				opacity: 0.3
 				box-shadow: none
 		&:before
-			display: none 
-				 
+			display: none
+
 	button
 		display: block
 		width: 6px
@@ -139,7 +140,6 @@
 		+box-shadow(0 1px 5px rgba(0,0,0,.25))
 		cursor: pointer
 		+hide-text
-		border-radius: 50% 
+		border-radius: 50%
 		&:hover
 			box-shadow: none
-	

@@ -178,8 +178,8 @@ a
 			width: 100%
 		@media print
 			padding-left: 0
-			float: none
-			width: 100%
+			float: right
+			width: 228px
 			margin-top: 30px
 	.l-col-liquid
 		margin: 0 228px 0 0
@@ -190,7 +190,7 @@ a
 			padding: 0
 			border: 0
 		@media print
-			margin: 0
+			margin: 0 228px 0 0
 			padding: 0
 			border: 0
 .cols-wrap
@@ -237,6 +237,7 @@ a
 	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1)
 	@media print
 		position: relative
+
 	.l-center
 		+clr
 		+r(1024)
@@ -251,6 +252,9 @@ a
 	+r(1024)
 		height: 60px
 		line-height: 60px
+	@media print
+		-webkit-print-color-adjust: exact
+		print-color-adjust: exact
 	&:before
 		content: ""
 		display: inline-block
@@ -261,7 +265,7 @@ a
 
 .nav
 	float: left
-	margin-left: 8%
+	margin-left: 7%
 	+clr
 	+r(1200)
 		margin-left: 3%
