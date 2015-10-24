@@ -140,7 +140,7 @@ a { text-decoration: none; }
 .nav__search.is-active { background: #8c8d8d; }
 .nav__search.is-active > button { color: #fff; }
 .nav__search.is-active .fa-times { display: inline-block; }
-.nav__search.is-active .fa-search { display: none╤В╤Д╨╝; }
+.nav__search.is-active .fa-search { display: none; }
 
 .nav-search-form { background: #8c8d8d; position: relative; z-index: 10; display: none; position: fixed; top: 73px; left: 0; right: 0; padding: 14px 0; }
 @media only screen and (max-width: 1024px) { .nav-search-form { top: 60px; } }
