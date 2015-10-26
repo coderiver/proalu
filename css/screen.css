@@ -336,7 +336,7 @@ a { text-decoration: none; }
 .btn-simple:hover { background: #eb4200; color: #fff; border-radius: 54px; border-color: #eb4200; }
 .btn-simple .fa { margin-right: 13px; }
 
-.pic { position: relative; padding-left: 17px; }
+.pic { position: relative; }
 .pic img { display: block; max-width: 59%; }
 @media only screen and (max-width: 1024px) { .pic img { max-width: 100%; width: 100%; } }
 .pic__caption { position: absolute; right: 0; top: 50%; -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -webkit-transform: translateY(-50%); transform: translateY(-50%); padding: 40px 32px; width: 50%; background: #f5f5f5; *zoom: 1; }
