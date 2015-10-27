@@ -52,7 +52,7 @@ head.ready(function() {
 		$(this).toggleClass("is-active");
 		$(".js-nav-search").fadeToggle(200);
 	});
-	
+
 
 // lang list
 	$(".js-lang > a").on("click", function(){
@@ -66,7 +66,7 @@ head.ready(function() {
 		return false;
 	});
 
-// accordeon		
+// accordeon
 	$(".js-accord-toggle").on("click",function () {
 		var group = $(this).parents(".js-accord-group");
 		var accord = $(this).parents(".js-accord");
@@ -80,7 +80,7 @@ head.ready(function() {
 			group.find(".js-accord-list").slideUp(200);
 			accord.find(".js-accord-list").slideDown(200);
 		}
-	    
+
 	});
 
 	$(".js-accord-group").each(function(){
@@ -102,7 +102,7 @@ head.ready(function() {
 	           $(".js-select-list").fadeOut(200);
 	           select.toggleClass("is-active").find(".js-select-list").fadeToggle(200);
 	       }
-	      
+
 	   });
 
 	   $(".js-select-list li").on("click",function() {
@@ -157,7 +157,7 @@ head.ready(function() {
 				    scrollTop: top
 				}, 500);
 			}
-			
+
 			return false;
 	    });
 
@@ -207,7 +207,48 @@ head.ready(function() {
 		padding: 0,
 		nextEffect: 'fade',
 		prevEffect: 'fade',
-		arrows: false
+		arrows: true
+	});
+
+	$(".js-head-slider").slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		slide: '.head-slider-item',
+		nextArrow: '.slick-next-head',
+		prevArrow: '.slick-prev-head',
+		arrows: true
+
+	});
+
+	$(".js-head-slider2").slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		slide: '.head-slider-item2',
+		nextArrow: '.slick-next-head2',
+		prevArrow: '.slick-prev-head2',
+		arrows: true
+	});
+
+	$(".js-head-slider3").slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		slide: '.head-slider-item3',
+		nextArrow: '.slick-next-head3',
+		prevArrow: '.slick-prev-head3',
+		arrows: true
+	});
+
+	$(".js-head-slider4").slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		slide: '.head-slider-item4',
+		nextArrow: '.slick-next-head4',
+		prevArrow: '.slick-prev-head4',
+		arrows: true
 	});
 
 	if ($(".js-fotorama").length>0) {
@@ -234,7 +275,7 @@ head.ready(function() {
 	});
 
 
-	
+
 
 	if ($("html").hasClass("desktop")) {
 		var fotoramaAutoplay = 5000;
@@ -265,5 +306,5 @@ head.ready(function() {
 		return false;
 	});
 
-	
+
 });

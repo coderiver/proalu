@@ -765,6 +765,10 @@ a { text-decoration: none; }
 .el__img:hover:after { opacity: 0.5; }
 .el__img:after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: #000; opacity: 0; -moz-transition: opacity 0.2s; -o-transition: opacity 0.2s; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }
 .el__img img { margin: 0 auto; min-width: 100%; min-height: 100%; }
+.el__head:hover .slick-next-head, .el__head:hover .slick-prev-head, .el__head:hover .slick-prev-head2, .el__head:hover .slick-prev-head3, .el__head:hover .slick-prev-head4, .el__head .slick-prev-head { opacity: 1; }
+.el__head:hover .slick-next-head2 { opacity: 1; }
+.el__head:hover .slick-next-head3 { opacity: 1; }
+.el__head:hover .slick-next-head4 { opacity: 1; }
 .el__body { position: relative; padding: 17px 20px 0 0; z-index: 2; font-size: 13px; color: #7c7c7c; }
 .el__body:before { content: ""; position: absolute; top: -8px; left: 16px; width: 0px; height: 0px; border-style: solid; border-width: 0 10px 8px 10px; border-color: transparent transparent #fff transparent; }
 .el__title { position: relative; display: block; margin-bottom: 8px; padding-bottom: 11px; font-size: 13px; font-weight: bold; text-transform: uppercase; color: #555; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
@@ -1098,6 +1102,10 @@ a { text-decoration: none; }
 .slick-prev { right: 29px; }
 .slick-prev:before { background: url("../img/svg/caret-l.svg") no-repeat 0 0; -moz-background-size: 9px 17px; -o-background-size: 9px 17px; -webkit-background-size: 9px 17px; background-size: 9px 17px; width: 9px; height: 17px; display: inline-block; }
 .slick-prev:after { background: url("../img/svg/caret-l-white.svg") no-repeat 0 0; -moz-background-size: 9px 17px; -o-background-size: 9px 17px; -webkit-background-size: 9px 17px; background-size: 9px 17px; width: 9px; height: 17px; display: inline-block; }
+
+.slick-next-head, .slick-prev-head, .slick-prev-head2, .slick-prev-head3, .slick-prev-head4, .slick-next-head2, .slick-next-head3, .slick-next-head4 { position: absolute; right: 5px; top: 45%; z-index: 999; cursor: pointer; width: 15px; height: 24px; opacity: 0; background: url("../img/svg/caret-r-white.svg") no-repeat 0 0; -moz-background-size: 15px 24px; -o-background-size: 15px 24px; -webkit-background-size: 15px 24px; background-size: 15px 24px; width: 15px; height: 24px; display: inline-block; }
+
+.slick-prev-head, .slick-prev-head2, .slick-prev-head3, .slick-prev-head4 { left: 5px; background: url("../img/svg/caret-l-white.svg") no-repeat 0 0; -moz-background-size: 15px 24px; -o-background-size: 15px 24px; -webkit-background-size: 15px 24px; background-size: 15px 24px; width: 15px; height: 24px; display: inline-block; }
 
 .slick-dots { text-align: center; position: absolute; margin: 0; bottom: 0; left: 0; right: 0; }
 .slick-dots li { position: relative; display: inline-block; padding: 0 3px; }
