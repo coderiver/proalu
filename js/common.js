@@ -238,7 +238,7 @@ head.ready(function() {
 		slidernext = $(this).find('.popup-next');
 		sliderprev = $(this).find('.popup-prev');
 		$(this).slick({
-			infinite: true,
+			infinite: false,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			slide: '.popup-slider-item',
