@@ -34,6 +34,12 @@
 			width: 450px
 
 	.popup__pic
+		-webkit-background-size: contain 
+		-o-background-size: contain 
+		background-size: contain 
+		background-position:  50% 50%
+		background-color: #000 
+		background-repeat: no-repeat
 		img
 			width: 700px
 			height: 500px
@@ -67,6 +73,7 @@
 		h4
 			margin-bottom: 10px
 			font-size: 14px
+			margin-right: 30px 
 		p
 			font-size: 13px
 			line-height: 18px
@@ -116,6 +123,9 @@
 // popup slider
 .js-popup-slider
 	position: relative
+	margin-right: 230px 
+	+r(1000)
+		margin-right: 0 
 	.slick-disabled
 		display: none !important
 
@@ -150,7 +160,7 @@
 	&:before
 		+svg(caret-l-big,23,43)
 .popup-next
-	right: 230px
+	right: 0px
 	top: 45%
 	+r(1024)
 		right: 0
