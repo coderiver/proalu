@@ -237,6 +237,7 @@ head.ready(function() {
 	$(".js-popup-slider").each(function(index, el) {
 		slidernext = $(this).find('.popup-next');
 		sliderprev = $(this).find('.popup-prev');
+		if($(this).find('.popup-slider-item').length>1){
 		$(this).slick({
 			infinite: false,
 			slidesToShow: 1,
@@ -248,6 +249,11 @@ head.ready(function() {
 			speed: 900,
 			init: true
 		});
+		}
+		else{
+			slidernext.hide();
+			sliderprev.hide();
+		}
 	});
 
 		
